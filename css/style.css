@@ -48,7 +48,7 @@ nav {
 
 .subheading {
     font-family: "Raleway", sans-serif;
-    font-weight: 200;
+    font-weight: 700;
     color: #f87e57;
 }
 
@@ -57,7 +57,9 @@ nav {
 }
 
 .about-me {
-    height: 478px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #b9e75d;
 }
 
@@ -68,17 +70,19 @@ nav {
 /* Thanks For Reading */
 .thanks-container {
     align-self: center;
+    width: 400px;
 }
 
 .thanks-title {
-    color: #f87e57;
+    color: white;
     font-family: "Raleway", sans-serif;
     font-size: 2em;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .thanks-desc {
-    font-size: 1.5em;
+    color: #383838;
+    font-size: 1.25em;
 }
 
 .button-dropdown {
@@ -223,6 +227,23 @@ h4, .job-title {
     .job-title {
         margin-top: 20px;
     }
+    #meJPG {
+        margin-right: 0;
+    }
+    #aboutMeContainer {
+        flex-direction: column;
+    }
+    .thanks-title {
+        margin-top: 1em;
+    }
+
+    .skill {
+        flex-direction: column;
+    }
+    .progress-semi {
+        margin-right: 2.5rem!important;
+        margin-left: 2.5rem!important;
+    }
 }
 
 .deans-container {
@@ -255,7 +276,6 @@ h4, .job-title {
 }
 
 .progress-semi {
-    height: 200px;
     margin-right: 1rem;
     margin-left: 1rem;
 }
@@ -271,8 +291,8 @@ h4, .job-title {
     z-index: -1;
 }
 
-.blur {
-    filter: blur(4px) opacity(90%);
+.lighten {
+    filter: opacity(90%);
 }
 
 /* Hero Header */
@@ -288,7 +308,7 @@ h4, .job-title {
 
 .hero canvas {
     position: absolute;
-    top: 426px;
+    bottom: 0;
     width: 2000px;
     height: 400px;
 }
@@ -342,7 +362,7 @@ h4, .job-title {
 }
 
 .hero-subtitle-3 {
-    font-weight: 600;
+    font-weight: 700;
     color: #89dad1;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -622,6 +642,12 @@ figure {
     .portfolio {
         width: 375px
     }
+}
+
+.tag {
+    border: 1px solid white;
+    padding: 0 8px;
+    border-radius: 4px;
 }
 
 /* Navbar */

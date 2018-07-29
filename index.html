@@ -10,397 +10,417 @@
     <link href="css/materialize.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="navbar-fixed">
-    <nav id="top-nav" class="ease-2 nav-transparent">
-        <div class="nav-wrapper">
-            <a id="nav-home" href="#" class="ease-2 logo">
-                <svg id="logo" class="ml-0_5 mr-1" style="height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.5 72">
-                    <g>
-                        <line class="cls-1" x1="16.01" y1="18" x2="23.14" y2="28.62"></line>
-                        <line class="cls-1" x1="33.57" y1="42.59" x2="40.7" y2="53.21"></line>
-                        <line class="cls-1" x1="23.38" y1="42.59" x2="16.25" y2="53.21"></line>
-                        <circle class="cls-2" cx="11.21" cy="10.72" r="8.72"></circle>
-                        <circle class="cls-2" cx="29.38" cy="34.71" r="8.72"></circle>
-                        <circle class="cls-2" cx="45.77" cy="60.75" r="8.72"></circle>
-                        <circle class="cls-2" cx="10.72" cy="61.28" r="8.72"></circle>
-                    </g>
-                </svg>
-                <span class="kern">Alex<br/>Petrusca</span>
-            </a>
-            <ul id="nav-mobile" class="ease-2-transform table-of-contents">
-                <li><a id="home-button" href="#home">Home</a></li>
-                <li><a id="skills-button" href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-            </ul>
-        </div>
-    </nav>
-</div>
-<main>
-    <!--HOME-->
-    <div id="home" class="scrollspy hero">
-        <div class="hero parallax-container">
-            <div class="parallax"><img class="hero-img" src="rsc/hero-new.jpg"></div>
-            <!--<div class="parallax"><img src="rsc/ucsc/hero-min.jpg"></div>-->
-        </div>
-        <canvas id="hero-canvas" width="2000" height="400"></canvas>
-        <div class="hero-container container ease-2">
-            <div class="hero-title-container">
-                <div class="hero-title">Hi, My Name Is Alex Petrusca</div>
-                <div class="hero-subtitle-1">And I am a programmer.</div>
-                <div class="hero-subtitle-2">I am passionate about</div>
-                <div class="hero-subtitle-3">
-                    <span id="typer"></span>
-                </div>
+<div id="siteWrapper" style="overflow: hidden;">
+    <div class="navbar-fixed">
+        <nav id="top-nav" class="ease-2 nav-transparent">
+            <div class="nav-wrapper">
+                <a id="nav-home" href="#" class="ease-2 logo">
+                    <svg id="logo" class="ml-0_5 mr-1" style="height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.5 72">
+                        <g>
+                            <line class="cls-1" x1="16.01" y1="18" x2="23.14" y2="28.62"></line>
+                            <line class="cls-1" x1="33.57" y1="42.59" x2="40.7" y2="53.21"></line>
+                            <line class="cls-1" x1="23.38" y1="42.59" x2="16.25" y2="53.21"></line>
+                            <circle class="cls-2" cx="11.21" cy="10.72" r="8.72"></circle>
+                            <circle class="cls-2" cx="29.38" cy="34.71" r="8.72"></circle>
+                            <circle class="cls-2" cx="45.77" cy="60.75" r="8.72"></circle>
+                            <circle class="cls-2" cx="10.72" cy="61.28" r="8.72"></circle>
+                        </g>
+                    </svg>
+                    <span class="kern">Alex<br/>Petrusca</span>
+                </a>
+                <ul id="nav-mobile" class="ease-2-transform table-of-contents">
+                    <li><a id="home-button" href="#home">Home</a></li>
+                    <li><a id="skills-button" href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </div>
-
-    <!--SKILLS-->
-    <div id="skills" class="scrollspy">
-        <div class="center-align raleway">
-            <h2 class="mt-0 pt-5">Skills</h2>
-            <h6 class="mb-5 center-6">My relevant computer programming skills. High ratings correspond to "very
-                comfortable with" and low ratings correspond to "not very comfortable with."</h6>
-            <div id="skillsRow1" class="center-8 mb-5i row flex-row">
-                <div id="progressJava" class="progress-semi"></div>
-                <div id="progressCplusplus" class="progress-semi"></div>
-                <div id="progressC" class="progress-semi"></div>
-                <div id="progressPython" class="progress-semi"></div>
+    <main>
+        <!--HOME-->
+        <div id="home" class="scrollspy hero">
+            <div class="hero parallax-container">
+                <div class="parallax"><img class="hero-img" src="rsc/hero-new.jpg"></div>
+                <!--<div class="parallax"><img src="rsc/ucsc/hero-min.jpg"></div>-->
+                <canvas id="hero-canvas" width="2000" height="400"></canvas>
             </div>
-            <div id="skillsRow2" class="center-8 mb-5i row flex-row">
-                <div id="progressJavascript" class="progress-semi"></div>
-                <div id="progressHTML" class="progress-semi"></div>
-                <div id="progressCSS" class="progress-semi"></div>
-                <div id="progressScala" class="progress-semi"></div>
-            </div>
-            <h4 class="mt-0 pt-0 subheading">Other</h4>
-            <span>
-                Experience with x86 Assembly (NASM), NumPy, Git, Apache Maven, LaTeX and Unix/Linux.<br>
-                Java experience includes backend development and testing with Spring, JUnit, and Selenium.<br>
-                JavaScript experience includes frontend development with AngularJS, JQuery, and CoffeeScript.
-            </span>
-            <div class="pb-5"></div>
-        </div>
-    </div>
-    <div class="parallax-container">
-        <canvas id="skills-canvas" width="2000" height="425"></canvas>
-        <div class="parallax blur"><img src="rsc/ucsc/ucsc8-min.jpg"></div>
-    </div>
-
-    <!--EXPERIENCE-->
-    <div id="experience" class="scrollspy">
-        <div class="center-align">
-            <h2 class="mt-0 pt-5">Experience</h2>
-            <div class="row">
-                <div class="flex-job-container" style="width: 900px">
-                    <img class="job-icon" src="rsc/paxata.png" style="height: 14.5em; width: 14.5em;">
-                    <div class="job-desc">
-                        <h4 class="job-title">Full-Stack Software Engineer at Paxata</h4>
-                        <span class="job-year">2017 | REDWOOD CITY, CA</span><br>
-                        <ul>
-                            <li class="job-bullet">
-                                Used Agile to develop a landing page that expedites common workflows and minimizes data inconsistencies
-                            </li>
-                            <li class="job-bullet">
-                                Designed Scala APIs and AngularJS interfaces that query MongoDB for metadata on prioritized data/projects
-                            </li>
-                            <li class="job-bullet">
-                                Implemented JUnit integration tests using Selenium to define expected system behavior for the new landing page
-                            </li>
-                        </ul>
+            <div class="hero-container container ease-2">
+                <div class="hero-title-container">
+                    <div class="hero-title">Hi, My Name Is Alex Petrusca</div>
+                    <div class="hero-subtitle-1">And I am a programmer.</div>
+                    <div class="hero-subtitle-2">I am passionate about</div>
+                    <div class="hero-subtitle-3">
+                        <span id="typer"></span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="pb-5"></div>
-    </div>
-    <div class="parallax-container">
-        <canvas id="experience-canvas" width="2000" height="425"></canvas>
-        <div class="parallax blur"><img src="rsc/ucsc/ucsc3-min.jpg"></div>
-    </div>
 
-    <!--EDUCATION-->
-    <div id="education" class="scrollspy">
-        <div class="center-align">
-            <h2 class="mt-0 pt-5">Education</h2>
+        <!--SKILLS-->
+        <div id="skills" class="scrollspy">
+            <div class="center-align raleway">
+                <h2 class="mt-0 pt-5">Skills</h2>
+                <h6 class="mb-5 center-6">My relevant computer programming skills. High ratings correspond to "very
+                    comfortable with" and low ratings correspond to "not very comfortable with."</h6>
+                <div id="skillsRow" class="center-7">
+                    <div class="flex skill">
+                        <div class="mb-5i flex-row">
+                            <div id="progressJava" class="progress-semi"></div>
+                            <div id="progressCplusplus" class="progress-semi"></div>
+                        </div>
+                        <div class="mb-5i flex-row">
+                            <div id="progressC" class="progress-semi"></div>
+                            <div id="progressPython" class="progress-semi"></div>
+                        </div>
+                    </div>
+                    <div class="flex skill">
+                        <div class="mb-5i flex-row">
+                            <div id="progressJavascript" class="progress-semi"></div>
+                            <div id="progressHTML" class="progress-semi"></div>
+                        </div>
+                        <div class="mb-5i flex-row">
+                            <div id="progressCSS" class="progress-semi"></div>
+                            <div id="progressScala" class="progress-semi"></div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="mt-0 pt-0 subheading">Other</h4>
+                <span>
+                    Experience with x86 Assembly (NASM), NumPy, Git, Apache Maven, LaTeX and Unix/Linux.<br>
+                    Java experience includes backend development and testing with Spring, JUnit, and Selenium.<br>
+                    JavaScript experience includes frontend development with AngularJS, JQuery, and CoffeeScript.
+                </span>
+                <div class="pb-5"></div>
+            </div>
+        </div>
+        <div class="parallax-container">
+            <canvas id="skills-canvas" width="2000" height="425"></canvas>
+            <div class="parallax lighten"><img src="rsc/ucsc/ucsc7-min-new.jpg"></div>
+        </div>
 
-            <img class="job-icon mb-1" src="rsc/uc-logo.png" style="height:300px">
-            <h5 class="kern" style="color:black">UNIVERSITY OF CALIFORNIA, SANTA CRUZ</h5>
-            <div class="deans-container">
-                <h5 class="mb-2 mt-0_5 raleway">Computer Science B.S., Class of 2020</h5>
-                <!--<div class="mb-2">-->
-                    <!--<span class="deans-honor raleway">Dean's Honors</span>-->
-                <!--</div>-->
-                <ul id="award-dropdown" class="collapsible center-align button-dropdown ease-2" style="width: 230px">
-                    <li>
-                        <div id="award-header" class="collapsible-header dropdown-header" tabindex="0">Dean's Honors</div>
-                        <div class="collapsible-body deans-body">
-                            <div class="center-div deans-desc">
-                                <!--<img class="mb-1" src="rsc/green trophy.svg" style="height: 120px">-->
-                                <img class="mb-1" src="rsc/trophy.svg" style="height: 120px">
-                                <div>Received 2 years in a row for outstanding academic achievement. </div>
+        <!--EXPERIENCE-->
+        <div id="experience" class="scrollspy">
+            <div class="center-align">
+                <h2 class="mt-0 pt-5">Experience</h2>
+                <div class="row">
+                    <div class="flex-job-container" style="width: 900px">
+                        <img class="job-icon" src="rsc/paxata.png" style="height: 14.5em; width: 14.5em;">
+                        <div class="job-desc">
+                            <h4 class="job-title">Full-Stack Software Engineer at Paxata</h4>
+                            <span class="job-year">2017 | REDWOOD CITY, CA</span><br>
+                            <ul>
+                                <li class="job-bullet">
+                                    Used Agile to develop a landing page that expedites common workflows and minimizes data inconsistencies
+                                </li>
+                                <li class="job-bullet">
+                                    Designed Scala APIs and AngularJS interfaces that query MongoDB for metadata on prioritized data/projects
+                                </li>
+                                <li class="job-bullet">
+                                    Implemented JUnit integration tests using Selenium to define expected system behavior for the new landing page
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pb-5"></div>
+        </div>
+        <div class="parallax-container">
+            <canvas id="experience-canvas" width="2000" height="425"></canvas>
+            <div class="parallax lighten"><img src="rsc/ucsc/ucsc3-min-new.jpg"></div>
+        </div>
+
+        <!--EDUCATION-->
+        <div id="education" class="scrollspy">
+            <div class="center-align">
+                <h2 class="mt-0 pt-5">Education</h2>
+                <div class="mb-1 flex-row">
+                    <img class="job-icon mr-3" src="rsc/education/sharp2.jpg" style="height:200px">
+                    <img class="job-icon" src="rsc/education/uc-logo.png" style="height:300px">
+                    <img class="job-icon ml-3" src="rsc/education/sharp.jpg" style="height:200px">
+                </div>
+                <h5 class="kern" style="color:black; font-weight:700;">UNIVERSITY OF CALIFORNIA, SANTA CRUZ</h5>
+                <div class="deans-container">
+                    <h5 class="mb-2 mt-0_5 raleway">Computer Science B.S., Class of 2020</h5>
+                    <ul id="award-dropdown" class="collapsible center-align button-dropdown ease-2" style="width: 230px">
+                        <li>
+                            <div id="award-header" class="collapsible-header dropdown-header" tabindex="0">Dean's Honors</div>
+                            <div class="collapsible-body deans-body">
+                                <div class="center-div deans-desc">
+                                    <!--<img class="mb-1" src="rsc/green-trophy.svg" style="height: 120px">-->
+                                    <img class="mb-1" src="rsc/education/trophy.svg" style="height: 120px">
+                                    <div>Received 2 years in a row for outstanding academic achievement. </div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
 
-                <div class="pb-2"></div>
-                <hr>
-                <div class="mb-2"></div>
+                    <div class="pb-2"></div>
+                    <hr>
+                    <div class="mb-2"></div>
 
-                <h4 class="subheading pt-1 mb-2">Relevant Coursework</h4>
-                <ul class="center-4_5-i collapsible left-align" >
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="small material-icons number-label">looks_one</i>
-                            <span>CMPS 102: Introduction to Analysis of Algorithms</span>
-                        </div>
-                        <div class="collapsible-body">
-                            <span>
-                                Methods for the systematic construction and mathematical analysis of algorithms. Order
-                                notation, the RAM model of computation, lower bounds, and recurrence relations are
-                                covered. The algorithm design techniques include divide-and-conquer, branch and bound,
-                                and dynamic programming. Applications to combinatorial, graph, string, and geometric algorithms.
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="small material-icons number-label">looks_two</i>
-                            CMPS 109: Advanced Programming
-                        </div>
-                        <div class="collapsible-body">
-                            <span>
-                                An introduction to object-oriented techniques of software development including data
-                                abstraction, inheritance, polymorphism, and object-oriented design. Extensive practice
-                                using a computer to solve problems, including construction of graphical user interfaces
-                                and a multithreaded client/server applications.
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="small material-icons number-label">looks_3</i>
-                            CMPS 130: Computational Models
-                        </div>
-                        <div class="collapsible-body">
-                            <span>
-                                Various representations for regular languages, context-free grammars, normal forms,
-                                simple parsing, pumping lemmas, Turing machines, the Church-Turing thesis, intractable
-                                problems, the P-NP question.
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="small material-icons number-label">looks_4</i>
-                            CMPS 104A: Fundamentals of Compiler Design
-                        </div>
-                        <div class="collapsible-body">
-                            <span>
-                                An introduction to the basic techniques used in compiler design. Topics include compiler
-                                structure, symbol tables, regular expressions and languages, finite automata, lexical
-                                analysis, context-free languages, LL(1), recursive descent, LALR(1), and LR(1) parsing;
-                                and attribute grammars as a model of syntax-directed translation. Students use compiler
-                                building tools to construct a working compiler.
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="small material-icons number-label">looks_5</i>
-                            CMPS 101: Algorithms and Abstract Data Types
-                        </div>
-                        <div class="collapsible-body">
-                            <span>
-                                Studies basic algorithms and their relationships to common abstract data types. Covers
-                                the notions of abstract data types and the distinction between an abstract data type and
-                                an implementation of that data type. The complexity analysis of common algorithms using
-                                asymptotic (big "O") notation is emphasized. Topics include sorting and searching
-                                techniques, basic graph algorithms, and algorithm design techniques. Abstract data types
-                                covered include priority queues, dictionaries, disjoint sets, heaps, balanced trees, and
-                                hashing. Familiarity with C, Java, and Unix is assumed.
-                            </span>
-                        </div>
-                    </li>
-                </ul>
+                    <h4 class="subheading pt-1 mb-2">Relevant Coursework</h4>
+                    <ul class="center-6-i collapsible left-align" >
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="small material-icons number-label">looks_one</i>
+                                <span>CMPS 102: Introduction to Analysis of Algorithms</span>
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    Methods for the systematic construction and mathematical analysis of algorithms. Order
+                                    notation, the RAM model of computation, lower bounds, and recurrence relations are
+                                    covered. The algorithm design techniques include divide-and-conquer, branch and bound,
+                                    and dynamic programming. Applications to combinatorial, graph, string, and geometric algorithms.
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="small material-icons number-label">looks_two</i>
+                                CMPS 109: Advanced Programming
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    An introduction to object-oriented techniques of software development including data
+                                    abstraction, inheritance, polymorphism, and object-oriented design. Extensive practice
+                                    using a computer to solve problems, including construction of graphical user interfaces
+                                    and a multithreaded client/server applications.
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="small material-icons number-label">looks_3</i>
+                                CMPS 130: Computational Models
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    Various representations for regular languages, context-free grammars, normal forms,
+                                    simple parsing, pumping lemmas, Turing machines, the Church-Turing thesis, intractable
+                                    problems, the P-NP question.
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="small material-icons number-label">looks_4</i>
+                                CMPS 104A: Fundamentals of Compiler Design
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    An introduction to the basic techniques used in compiler design. Topics include compiler
+                                    structure, symbol tables, regular expressions and languages, finite automata, lexical
+                                    analysis, context-free languages, LL(1), recursive descent, LALR(1), and LR(1) parsing;
+                                    and attribute grammars as a model of syntax-directed translation. Students use compiler
+                                    building tools to construct a working compiler.
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="small material-icons number-label">looks_5</i>
+                                CMPS 101: Algorithms and Abstract Data Types
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    Studies basic algorithms and their relationships to common abstract data types. Covers
+                                    the notions of abstract data types and the distinction between an abstract data type and
+                                    an implementation of that data type. The complexity analysis of common algorithms using
+                                    asymptotic (big "O") notation is emphasized. Topics include sorting and searching
+                                    techniques, basic graph algorithms, and algorithm design techniques. Abstract data types
+                                    covered include priority queues, dictionaries, disjoint sets, heaps, balanced trees, and
+                                    hashing. Familiarity with C, Java, and Unix is assumed.
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <div class="pb-5"></div>
         </div>
-        <div class="pb-5"></div>
-    </div>
-    <div class="parallax-container">
-        <canvas id="education-canvas" width="2000" height="425"></canvas>
-        <div class="parallax blur"><img src="rsc/ucsc/ucsc6-min.jpg"></div>
-    </div>
-
-    <!--PROJECTS-->
-    <div id="projects" class="scrollspy">
-        <div class="center-align">
-            <h2 class="mt-0 pt-5">Projects</h2>
-            <h6 class="mb-5 center-6">Projects that I find worthy of display.</h6>
-            <div class="portfolioFilter">
-                <ul class="Portfolio-nav">
-                    <li><a href="#" data-filter="*" class="current waves-effect waves-light raleway" id="all">All</a></li>
-                    <li><a href="#" data-filter=".ai" class="waves-effect waves-light raleway">Artificial Intelligence</a></li>
-                    <li><a href="#" data-filter=".graphics" class="waves-effect waves-light raleway">Graphics</a></li>
-                    <li><a href="#" data-filter=".web" class="waves-effect waves-light raleway">Web</a></li>
-                    <li><a href="#" data-filter=".misc" class="waves-effect waves-light raleway">Miscellaneous</a></li>
-                </ul>
-            </div>
+        <div class="parallax-container">
+            <canvas id="education-canvas" width="2000" height="425"></canvas>
+            <div class="parallax lighten"><img src="rsc/ucsc/ucsc10-min-new.jpg"></div>
         </div>
-        <div class="portfolio ease-2">
-            <div class="Portfolio-box ai">
-                <div class="hover-wrapper">
-                    <figure id="checkers-figure">
-                        <a href="#">
-                            <img class="portfolio-img" src="rsc/portfolio/icon/checkers.svg" alt="img03">
-                        </a>
-                        <figcaption>
-                            <span></span>
-                            <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
-                        </figcaption>
-                    </figure>
+
+        <!--PROJECTS-->
+        <div id="projects" class="scrollspy">
+            <div class="center-align">
+                <h2 class="mt-0 pt-5">Projects</h2>
+                <h6 class="mb-5 center-6">Projects that I find worthy of display.</h6>
+                <div class="portfolioFilter">
+                    <ul class="Portfolio-nav">
+                        <li><a href="#" data-filter="*" class="current waves-effect waves-light raleway" id="all">All</a></li>
+                        <li><a href="#" data-filter=".ai" class="waves-effect waves-light raleway">Artificial Intelligence</a></li>
+                        <li><a href="#" data-filter=".graphics" class="waves-effect waves-light raleway">Graphics</a></li>
+                        <li><a href="#" data-filter=".web" class="waves-effect waves-light raleway">Web</a></li>
+                        <li><a href="#" data-filter=".misc" class="waves-effect waves-light raleway">Miscellaneous</a></li>
+                    </ul>
                 </div>
-                <h5>Checkers Engine</h5>
-                <p>Artificial Intelligence</p>
             </div>
-            <div class="Portfolio-box ai">
-                <div class="hover-wrapper">
-                    <figure id="connect4-figure">
-                        <a href="#">
-                            <img class="portfolio-img" src="rsc/portfolio/icon/connect4.svg" alt="img03">
-                        </a>
-                        <figcaption>
-                            <span>Jacob Cummings</span>
-                            <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
-                        </figcaption>
-                    </figure>
+            <div class="portfolio ease-2">
+                <div class="Portfolio-box ai">
+                    <div class="hover-wrapper">
+                        <figure id="checkers-figure">
+                            <a href="#">
+                                <img class="portfolio-img" src="rsc/portfolio/icon/checkers.svg" alt="img03">
+                            </a>
+                            <figcaption>
+                                <span></span>
+                                <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>Checkers Engine</h5>
+                    <p>Artificial Intelligence</p>
                 </div>
-                <h5>Connect Four Engine</h5>
-                <p>Artificial Intelligence</p>
-            </div>
-            <div class="Portfolio-box ai">
-                <div class="hover-wrapper">
-                    <figure id="neural-figure">
-                        <a href="#">
-                            <img class="portfolio-img" src="rsc/portfolio/icon/neural.svg" alt="img03">
-                        </a>
-                        <figcaption>
-                            <span>Jacob Cummings</span>
-                            <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
-                        </figcaption>
-                    </figure>
+                <div class="Portfolio-box ai">
+                    <div class="hover-wrapper">
+                        <figure id="connect4-figure">
+                            <a href="#">
+                                <img class="portfolio-img" src="rsc/portfolio/icon/connect4.svg" alt="img03">
+                            </a>
+                            <figcaption>
+                                <span>Jacob Cummings</span>
+                                <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>Connect Four Engine</h5>
+                    <p>Artificial Intelligence</p>
                 </div>
-                <h5>Handwritten Digit Classifier</h5>
-                <p>Artificial Intelligence</p>
-            </div>
-            <div class="Portfolio-box graphics">
-                <div class="hover-wrapper">
-                    <figure id="atari-figure">
-                        <a href="#">
-                            <img class="portfolio-img" src="rsc/portfolio/icon/atari.svg" alt="img03">
-                        </a>
-                        <figcaption>
-                            <span>Jacob Cummings</span>
-                            <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
-                        </figcaption>
-                    </figure>
+                <div class="Portfolio-box ai">
+                    <div class="hover-wrapper">
+                        <figure id="neural-figure">
+                            <a href="#">
+                                <img class="portfolio-img" src="rsc/portfolio/icon/neural.svg" alt="img03">
+                            </a>
+                            <figcaption>
+                                <span>Jacob Cummings</span>
+                                <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>Handwritten Digit Classifier</h5>
+                    <p>Artificial Intelligence</p>
                 </div>
-                <h5>Java Breakout Game</h5>
-                <p>Graphics</p>
-            </div>
-            <div class="Portfolio-box misc">
-                <div class="hover-wrapper">
-                    <figure id="virus-figure">
-                        <a href="#">
-                            <img class="portfolio-img" src="rsc/portfolio/icon/virus.svg" alt="img03">
-                        </a>
-                        <figcaption>
-                            <span>Jacob Cummings</span>
-                            <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
-                        </figcaption>
-                    </figure>
+                <div class="Portfolio-box graphics">
+                    <div class="hover-wrapper">
+                        <figure id="atari-figure">
+                            <a href="#">
+                                <img class="portfolio-img" src="rsc/portfolio/icon/atari.svg" alt="img03">
+                            </a>
+                            <figcaption>
+                                <span>Jacob Cummings</span>
+                                <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>Java Breakout Game</h5>
+                    <p>Graphics</p>
                 </div>
-                <h5>x86 Assembly Computer Virus</h5>
-                <p>Miscellaneous</p>
-            </div>
-            <div class="Portfolio-box graphics">
-                <div class="hover-wrapper">
-                    <figure id="cube-figure">
-                        <a href="#">
-                            <img class="portfolio-img" src="rsc/portfolio/icon/cube.svg" alt="img03">
-                        </a>
-                        <figcaption>
-                            <span>Jacob Cummings</span>
-                            <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
-                        </figcaption>
-                    </figure>
+                <div class="Portfolio-box misc">
+                    <div class="hover-wrapper">
+                        <figure id="virus-figure">
+                            <a href="#">
+                                <img class="portfolio-img" src="rsc/portfolio/icon/virus.svg" alt="img03">
+                            </a>
+                            <figcaption>
+                                <span>Jacob Cummings</span>
+                                <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>x86 Assembly Computer Virus</h5>
+                    <p>Miscellaneous</p>
                 </div>
-                <h5>OpenGL Model Loader</h5>
-                <p>Graphics</p>
+                <div class="Portfolio-box graphics">
+                    <div class="hover-wrapper">
+                        <figure id="cube-figure">
+                            <a href="#">
+                                <img class="portfolio-img" src="rsc/portfolio/icon/cube.svg" alt="img03">
+                            </a>
+                            <figcaption>
+                                <span>Jacob Cummings</span>
+                                <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>OpenGL Model Loader</h5>
+                    <p>Graphics</p>
+                </div>
             </div>
+            <div class="pb-5"></div>
         </div>
-        <div class="pb-5"></div>
-    </div>
-    <div class="parallax-container">
-        <canvas id="projects-canvas" width="2000" height="425"></canvas>
-        <div class="parallax blur"><img src="rsc/ucsc/ucsc1-min.jpg"></div>
-    </div>
-
-    <!--RESUME-->
-    <div id="resume" class="scrollspy">
-        <h2 class="mt-0 pt-5 center-align">Resume</h2>
-        <ul id="resume-dropdown" class="collapsible center-align button-dropdown ease-2">
-            <li>
-                <div id="resume-header" class="ease-2 collapsible-header dropdown-header" tabindex="0">Read Resume</div>
-                <div class="collapsible-body dropdown-body">
-                    <div id="resumeContainer" class="center-align"></div>
-                </div>
-            </li>
-        </ul>
-        <div class="pb-5"></div>
-    </div>
-
-    <!--ABOUT ME-->
-    <div class="flex-row about-me">
-        <img class="mr-3 job-icon" src="rsc/me.jpg" style="height: 350px;">
-        <div class="thanks-container align-center">
-            <div class="thanks-title mb-1">THANKS FOR READING</div>
-            <span class="thanks-desc raleway">Feel free to reach out to me!</span>
+        <div class="parallax-container">
+            <canvas id="projects-canvas" width="2000" height="425"></canvas>
+            <div class="parallax lighten"><img src="rsc/ucsc/ucsc1-min-new.jpg"></div>
         </div>
-    </div>
 
-    <!--CONTACTS-->
-    <div class="contacts">
-        <div class="container center">
-            <div class="valign-wrapper mb-0i row flex" style="height: 150px;">
-                <div class="col s12 m3">
-                    <a href="tel:650-996-3084"><i class="small material-icons white-text">local_phone</i></a>
-                    <a href="tel:650-996-3084"><p class="white-text">(650) 996-3084</p></a>
-                </div>
-                <div class="col s12 m3">
-                    <a href="mailto:apetrusc@ucsc.edu"><i class="small material-icons white-text">email</i></a>
-                    <a href="mailto:apetrusc@ucsc.edu"><p class="white-text">apetrusc@ucsc.edu</p></a>
-                </div>
-                <div class="col s12 m3">
-                    <a href="https://github.com/AlexPetrusca"><img src="rsc/github.png"></a>
-                    <a href="https://github.com/AlexPetrusca"><p class="white-text">AlexPetrusca</p></a>
-                </div>
-                <div class="col s12 m3">
-                    <a href="https://www.linkedin.com/in/alexandru-petrusca"><img src="rsc/linkedin.png"></a>
-                    <a href="https://www.linkedin.com/in/alexandru-petrusca"><p class="white-text">alexandru-petrusca</p></a>
+        <!--RESUME-->
+        <div id="resume" class="scrollspy">
+            <h2 class="mt-0 pt-5 center-align">Resume</h2>
+            <ul id="resume-dropdown" class="collapsible center-align button-dropdown ease-2">
+                <li>
+                    <div id="resume-header" class="ease-2 collapsible-header dropdown-header" tabindex="0">Read Resume</div>
+                    <div class="collapsible-body dropdown-body">
+                        <div id="resumeContainer" class="center-align"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="pb-5"></div>
+        </div>
+
+        <!--ABOUT ME-->
+        <div class="about-me pt-5 pb-5">
+            <div id="aboutMeContainer" class="flex-row">
+                <img id="meJPG" class="mr-3 job-icon" src="rsc/me.jpg" style="height: 320px;">
+                <div class="thanks-container align-center">
+                    <div class="thanks-title mb-1">About Me</div>
+                    <span class="thanks-desc raleway">
+                        I am an aspiring software engineer looking to specialize in artificial intelligence and machine
+                        learning. I like building passion projects from scratch and learning new things to get my projects
+                        off the ground. Over four+ years of programming, I have picked up experience working with Java,
+                        Scala, JavaScript, Python and C/C++ on projects ranging from video games and music visualizers
+                        to Minimax AIs and feed forward neural nets.
+                    </span>
                 </div>
             </div>
         </div>
-    </div>
-</main>
 
-<footer class="center pt-1 pb-1">
-    © 2018 Alex Petrusca
-</footer>
+        <!--CONTACTS-->
+        <div class="contacts">
+            <div class="container center">
+                <div class="valign-wrapper mb-0i row flex" style="height: 150px;">
+                    <div class="col s12 m3">
+                        <a href="tel:650-996-3084"><i class="small material-icons white-text">local_phone</i></a>
+                        <a href="tel:650-996-3084"><p class="white-text">(650) 996-3084</p></a>
+                    </div>
+                    <div class="col s12 m3">
+                        <a href="mailto:apetrusc@ucsc.edu"><i class="small material-icons white-text">email</i></a>
+                        <a href="mailto:apetrusc@ucsc.edu"><p class="white-text">apetrusc@ucsc.edu</p></a>
+                    </div>
+                    <div class="col s12 m3">
+                        <a href="https://github.com/AlexPetrusca"><img src="rsc/github.png"></a>
+                        <a href="https://github.com/AlexPetrusca"><p class="white-text">AlexPetrusca</p></a>
+                    </div>
+                    <div class="col s12 m3">
+                        <a href="https://www.linkedin.com/in/alexandru-petrusca"><img src="rsc/linkedin.png"></a>
+                        <a href="https://www.linkedin.com/in/alexandru-petrusca"><p class="white-text">alexandru-petrusca</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="center pt-1 pb-1">
+        © 2018 Alex Petrusca
+    </footer>
+</div>
 
 <!--LIBRARY SCRIPT LOADING-->
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
