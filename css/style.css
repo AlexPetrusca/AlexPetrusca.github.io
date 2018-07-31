@@ -67,6 +67,10 @@ nav {
     letter-spacing: 0.02em;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 /* Thanks For Reading */
 .thanks-container {
     align-self: center;
@@ -78,9 +82,11 @@ nav {
     font-family: "Raleway", sans-serif;
     font-size: 2em;
     font-weight: 700;
+    line-height: 1em;
 }
 
 .thanks-desc {
+    text-align: justify;
     color: #383838;
     font-size: 1.25em;
 }
@@ -166,6 +172,7 @@ hr:after {
 }
 
 .number-label {
+    vertical-align: bottom;
     color: #a4de2b;
 }
 
@@ -558,7 +565,7 @@ figure {
 }
 
 .nav-solid {
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(255, 255, 255, 0.7) !important;
     color: black;
     stroke: gray;
 }
@@ -645,9 +652,7 @@ figure {
 }
 
 .tag {
-    border: 1px solid white;
     padding: 0 8px;
-    border-radius: 4px;
 }
 
 /* Navbar */
@@ -717,6 +722,12 @@ figure {
 @media (max-width: 600px) {
     .logo {
         transition: none !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .valign-wrapper {
+        flex-direction: column;
     }
 }
 
@@ -810,6 +821,22 @@ figure {
 
 .ml-1 {
     margin-left: 1rem;
+}
+
+.mt-1_5 {
+    margin-top: 1.5rem;
+}
+
+.mb-1_5 {
+    margin-bottom: 1.5rem;
+}
+
+.mr-1_5 {
+    margin-right: 1.5rem;
+}
+
+.ml-1_5 {
+    margin-left: 1.5rem;
 }
 
 .mt-2 {
@@ -1031,6 +1058,38 @@ figure {
 
 .p0-i {
     padding: 0 !important;
+}
+
+.pt-2i {
+    padding-top: 2rem !important;
+}
+
+.pb-2i {
+    padding-bottom: 2rem !important;
+}
+
+.pr-2i {
+    padding-right: 2rem !important;
+}
+
+.pl-2i {
+    padding-left: 2rem !important;
+}
+
+.pt-3i {
+    padding-top: 3rem !important;
+}
+
+.pb-3i {
+    padding-bottom: 3rem !important;
+}
+
+.pr-3i {
+    padding-right: 3rem !important;
+}
+
+.pl-3i {
+    padding-left: 3rem !important;
 }
 
 .footer-padding {

@@ -13,7 +13,7 @@ class Neuron {
 
     constructor(x, y) {
         this.x = x;
-        this.y = canvas.height - y;
+        this.y = 400 - y;
         this.r = Neuron.R();
         this.value = 0;
         this.connections = [];
@@ -24,7 +24,7 @@ class Neuron {
     newNeuron(len, theta) {
         let x = this.x + len * Math.cos(Math.PI / 180 * theta);
         let y = this.y - len * Math.sin(Math.PI / 180 * theta);
-        return new Neuron(x, canvas.height - y);
+        return new Neuron(x, 400 - y);
     }
 
     // Draw
@@ -154,10 +154,10 @@ class Neuron {
 
 
 /* MAIN CODE */
-let canvas = document.getElementById("hero-canvas");
-let g = canvas.getContext("2d");
-g.lineWidth = 4;
-g.strokeStyle = "#ffffff";
+// let canvas = document.getElementById("hero-canvas");
+// let g = canvas.getContext("2d");
+// g.lineWidth = 4;
+// g.strokeStyle = "#ffffff";
 
 let origin = new Neuron(-50, 250);
 let neu1 = neurons[neurons.length - 1].addNeuron(100, 40, .25);
@@ -255,36 +255,36 @@ neu22.connect(center10, 0.25);
 neu22.connect(center11, 0.25);
 neu24.connect(center11, 0.25);
 
-window.requestAnimationFrame(drawNet);
-function drawNet() {
-    if (window.scrollY < 2*window.innerHeight ) {
-        g.clearRect(0, 0, canvas.width, canvas.height);
-        g.fillStyle = "rgb(229, 91, 47)";
-        for (const neuron of neurons) {
-            neuron.drawConnections(g);
-        }
-        for (const neuron of neurons) {
-            neuron.drawNeuron(g);
-        }
-        for (const neuron of neurons) {
-            neuron.animate();
-        }
-        window.requestAnimationFrame(drawNet);
-    } else {
-        setTimeout(window.requestAnimationFrame(drawNet), 1000);
-    }
-}
-
-setInterval(function () {
-    if (window.scrollY < window.innerHeight) {
-        origin.sendPulse();
-        bottom2.sendPulse();
-        bottom5.sendPulse();
-        bottom7.sendPulse();
-        bottom8.sendPulse();
-        center10.sendPulse();
-    }
-}, 1000);
+// window.requestAnimationFrame(drawNet);
+// function drawNet() {
+//     if (window.scrollY < 2*window.innerHeight ) {
+//         g.clearRect(0, 0, canvas.width, canvas.height);
+//         g.fillStyle = "rgb(229, 91, 47)";
+//         for (const neuron of neurons) {
+//             neuron.drawConnections(g);
+//         }
+//         for (const neuron of neurons) {
+//             neuron.drawNeuron(g);
+//         }
+//         for (const neuron of neurons) {
+//             neuron.animate();
+//         }
+//         window.requestAnimationFrame(drawNet);
+//     } else {
+//         setTimeout(window.requestAnimationFrame(drawNet), 1000);
+//     }
+// }
+//
+// setInterval(function () {
+//     if (window.scrollY < window.innerHeight) {
+//         origin.sendPulse();
+//         bottom2.sendPulse();
+//         bottom5.sendPulse();
+//         bottom7.sendPulse();
+//         bottom8.sendPulse();
+//         center10.sendPulse();
+//     }
+// }, 1000);
 
 
 /* MAIN CODE */
