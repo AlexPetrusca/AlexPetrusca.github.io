@@ -119,22 +119,22 @@ document.getElementById("nav-home").onclick = function() {
 
 document.getElementById("resume-header").onclick = function () {
     const dropdown = document.getElementById("resume-dropdown");
-    if(dropdown.style.width === "80%") {
+    if(dropdown.style.width === "100%") {
         dropdown.style.width = "260px";
         dropdown.style.background = "";
     } else {
-        dropdown.style.width = "80%";
+        dropdown.style.width = "100%";
         dropdown.style.background = "#f87e57";
     }
 };
 
 document.getElementById("award-header").onclick = function () {
     const dropdown = document.getElementById("award-dropdown");
-    if(dropdown.style.width === "400px") {
+    if(dropdown.style.width === "100%") {
         dropdown.style.width = "230px";
         dropdown.style.background = "";
     } else {
-        dropdown.style.width = "400px";
+        dropdown.style.width = "100%";
         dropdown.style.background = "#f87e57";
     }
 };

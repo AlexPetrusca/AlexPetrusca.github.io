@@ -196,13 +196,17 @@ h4, .job-title {
     align-self: center;
 }
 
+.job-icon-side {
+    border-radius: 10px;
+    align-self: center;
+}
+
 .round-button {
     border-radius: 4px;
 }
 
 .job-desc {
-    padding-right: 30px!important;
-    padding-left: 30px!important;
+    padding-left: 30px;
 }
 
 .flex-job-container {
@@ -213,11 +217,15 @@ h4, .job-title {
     margin: auto;
 }
 
-@media (max-width: 1000px) and (min-width: 651px) {
-    .flex-job-container {
-        width: 650px !important;
-    }
+#aboutMeContainer {
+    width: 100%;
 }
+
+/*@media (max-width: 1000px) and (min-width: 651px) {*/
+    /*.flex-job-container {*/
+        /*width: 650px !important;*/
+    /*}*/
+/*}*/
 
 @media (max-width: 650px) {
     .flex-job-container {
@@ -231,14 +239,19 @@ h4, .job-title {
         align-items: center;
         text-align: center;
     }
+    .job-desc {
+        padding-left: 0!important;
+    }
     .job-title {
         margin-top: 20px;
     }
     #meJPG {
+        width: 100%;
         margin-right: 0;
     }
     #aboutMeContainer {
         flex-direction: column;
+        width: 400px;
     }
     .thanks-title {
         margin-top: 1em;
@@ -268,6 +281,10 @@ h4, .job-title {
     padding: 0.3em 1.2em 0.3em 1.2em;
     font-size: 25px;
     font-weight: 400;
+}
+
+#award-dropdown {
+    max-width: 400px;
 }
 
 /* Skill Progress Bars */
@@ -305,12 +322,6 @@ h4, .job-title {
 /* Hero Header */
 .hero {
     height: 100vh !important;
-}
-
-.hero-img {
-    /*zoom: 120%;*/
-    /*top: -250px;*/
-    /*left: 700px!important;*/
 }
 
 .hero canvas {
@@ -709,7 +720,11 @@ figure {
     color: inherit;
 }
 
-@media (max-width: 657px) {
+@media (max-width: 700px) {
+    .valign-wrapper {
+        flex-direction: column;
+    }
+
     .logo {
         transform: translateX(-50%) translateX(50vw);
     }
@@ -719,15 +734,48 @@ figure {
     }
 }
 
-@media (max-width: 600px) {
-    .logo {
-        transition: none !important;
+/* Responsiveness */
+.responsive {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+    .responsive {
+        width: 70%;
     }
 }
 
-@media (max-width: 700px) {
-    .valign-wrapper {
-        flex-direction: column;
+@media (max-width: 992px) {
+    .responsive {
+        width: 80%;
+    }
+
+    .job-icon-side {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .responsive {
+        width: 90%;
+    }
+
+    .deans-honor {
+        width: 90%;
+    }
+
+    .logo {
+        transition: none !important;
+    }
+
+    #meJPG {
+        width: 90
     }
 }
 
