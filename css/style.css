@@ -216,50 +216,6 @@ h4, .job-title {
     margin: auto;
 }
 
-/*@media (max-width: 1000px) and (min-width: 651px) {*/
-    /*.flex-job-container {*/
-        /*width: 650px !important;*/
-    /*}*/
-/*}*/
-
-@media (max-width: 650px) {
-    .flex-job-container {
-        width: 100% !important;
-    }
-}
-
-@media (max-width: 1000px) {
-    .flex-job-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .job-desc {
-        padding-left: 0!important;
-    }
-    .job-title {
-        margin-top: 20px;
-    }
-    #meJPG {
-        width: 100%;
-        margin-right: 0;
-    }
-    #aboutMeContainer {
-        flex-direction: column;
-    }
-    .thanks-title {
-        margin-top: 1em;
-    }
-
-    .skill {
-        flex-direction: column;
-    }
-    .progress-semi {
-        margin-right: 2.5rem!important;
-        margin-left: 2.5rem!important;
-    }
-}
-
 .deans-container {
     margin-bottom: 1.2em;
 }
@@ -294,8 +250,10 @@ h4, .job-title {
 }
 
 .progress-semi {
+    margin-bottom: 3rem!important;
     margin-right: 1rem;
     margin-left: 1rem;
+    max-width: 200px;
 }
 
 .progress-semi > svg {
@@ -415,7 +373,6 @@ h4, .job-title {
 }
 
 .hover-wrapper figure img {
-    max-width: 100%;
     display: block;
     position: relative;
     -webkit-transition: -webkit-transform 0.2s;
@@ -637,7 +594,7 @@ figure {
 }
 
 .portfolio-img {
-    height: 150px;
+    height: 175px;
 }
 
 .tag {
@@ -726,6 +683,19 @@ figure {
     .responsive {
         width: 70%;
     }
+
+    #meJPG {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #aboutMeContainer {
+        flex-direction: column;
+    }
+
+    .thanks-title {
+        padding-top: 2.5rem!important;
+    }
 }
 
 @media (max-width: 992px) {
@@ -737,8 +707,35 @@ figure {
         width: 100%;
     }
 
+    .portfolio-img {
+        height: 200px;
+    }
+
     .job-icon-side {
         display: none;
+    }
+
+    .flex-job-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .job-desc {
+        padding-left: 0!important;
+    }
+
+    .job-title {
+        margin-top: 20px;
+    }
+
+    .skill {
+        flex-direction: column;
+    }
+
+    .progress-semi {
+        margin-right: 2.5rem!important;
+        margin-left: 2.5rem!important;
     }
 }
 
@@ -753,6 +750,20 @@ figure {
 
     .logo {
         transition: none !important;
+    }
+
+    .progress-semi {
+        margin-right: 1rem!important;
+        margin-left: 1rem!important;
+        margin-bottom: 2rem!important;
+    }
+
+    .hero-title-container {
+        width: auto;
+    }
+
+    .hero-container {
+        top: 20%;
     }
 }
 
