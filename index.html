@@ -261,7 +261,8 @@
                 </div>
             </div>
             <div class="portfolio ease-2">
-                <div class="Portfolio-box ai">
+                <div class="grid-sizer"></div>
+                <div class="Portfolio-box grid-item ai">
                     <div class="hover-wrapper">
                         <figure id="checkers-figure">
                             <a href="#">
@@ -276,7 +277,7 @@
                     <h5>Checkers Engine</h5>
                     <p>Artificial Intelligence</p>
                 </div>
-                <div class="Portfolio-box ai">
+                <div class="Portfolio-box grid-item ai">
                     <div class="hover-wrapper">
                         <figure id="connect4-figure">
                             <a href="#">
@@ -291,7 +292,7 @@
                     <h5>Connect Four Engine</h5>
                     <p>Artificial Intelligence</p>
                 </div>
-                <div class="Portfolio-box ai">
+                <div class="Portfolio-box grid-item ai">
                     <div class="hover-wrapper">
                         <figure id="neural-figure">
                             <a href="#">
@@ -306,7 +307,7 @@
                     <h5>Handwritten Digit Classifier</h5>
                     <p>Artificial Intelligence</p>
                 </div>
-                <div class="Portfolio-box graphics">
+                <div class="Portfolio-box grid-item graphics">
                     <div class="hover-wrapper">
                         <figure id="atari-figure">
                             <a href="#">
@@ -321,7 +322,7 @@
                     <h5>Java Breakout Game</h5>
                     <p>Graphics</p>
                 </div>
-                <div class="Portfolio-box misc">
+                <div class="Portfolio-box grid-item misc">
                     <div class="hover-wrapper">
                         <figure id="virus-figure">
                             <a href="#">
@@ -336,7 +337,7 @@
                     <h5>x86 Assembly Computer Virus</h5>
                     <p>Miscellaneous</p>
                 </div>
-                <div class="Portfolio-box graphics">
+                <div class="Portfolio-box grid-item graphics">
                     <div class="hover-wrapper">
                         <figure id="cube-figure">
                             <a href="#">
@@ -442,8 +443,9 @@
             const $container = $('.portfolio');
             $container.isotope({
                 percentPosition: true,
+                itemSelector: '.grid-item',
                 masonry: {
-                    columnWidth: 375
+                    columnWidth: '.grid-sizer'
                 }
             });
             $('.portfolioFilter a').click(function () {

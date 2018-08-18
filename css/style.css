@@ -408,8 +408,7 @@ h4, .job-title {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    height: 250px;
-    max-width: 350px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -619,8 +618,7 @@ figure {
 .Portfolio-box {
     text-align: center;
     margin-bottom: 30px;
-    height: 350px;
-    width: 350px;
+    height: 380px;
     overflow: hidden;
     float: left;
     padding: 0;
@@ -636,7 +634,6 @@ figure {
 
 .portfolio {
     margin: 0 auto;
-    width: 1125px;
 }
 
 .portfolio-img {
@@ -712,13 +709,22 @@ figure {
     transition: all 0.2s ease-in-out;
 }
 
+.grid-sizer,
+.grid-item {
+    width: 33%;
+    padding: 0 10px;
+}
+
+@media (max-width: 1600px) {
+    .grid-sizer,
+    .grid-item {
+        width: 50%;
+    }
+}
+
 @media (max-width: 1200px) {
     .responsive {
         width: 70%;
-    }
-
-    .portfolio {
-        width: 750px;
     }
 }
 
@@ -727,8 +733,8 @@ figure {
         width: 80%;
     }
 
-    .portfolio {
-        width: 350px;
+    .grid-sizer, .grid-item {
+        width: 100%;
     }
 
     .job-icon-side {
@@ -739,14 +745,6 @@ figure {
 @media (max-width: 600px) {
     .responsive {
         width: 90%;
-    }
-
-    .portfolio {
-        width: 100%;
-    }
-
-    .Portfolio-box {
-        width: 100%;
     }
 
     .deans-honor {
