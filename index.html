@@ -268,7 +268,7 @@
                                 <img class="portfolio-img" src="rsc/portfolio/icon/checkers.svg" alt="img03">
                             </a>
                             <figcaption>
-                                <span>Javascript</span>
+                                <span class="tag">Javascript</span>
                                 <a href="javascript:void(0);" class="waves-effect waves-light raleway">Take a look</a>
                             </figcaption>
                         </figure>
@@ -352,7 +352,7 @@
                     <p>Graphics</p>
                 </div>
             </div>
-            <div class="pb-5"></div>
+            <div class="pb-2"></div>
         </div>
         <div class="parallax-container">
             <canvas id="projects-canvas" width="2000" height="425"></canvas>
@@ -376,9 +376,9 @@
         <!--ABOUT ME-->
         <div class="about-me pt-5 pb-5">
             <div id="aboutMeContainer" class="flex-row responsive">
-                <img id="meJPG" class="mr-3 job-icon" src="rsc/me.jpg">
+                <img id="meJPG" class="mr-3 job-icon" src="rsc/me.jpg" style="max-width: 400px">
                 <div class="thanks-container align-center">
-                    <div class="thanks-title mb-1_5">ABOUT ME</div>
+                    <div class="thanks-title mb-1_5 mt-2_5">ABOUT ME</div>
                     <div class="thanks-desc raleway">
                         I am an aspiring software engineer looking to specialize in artificial intelligence and machine
                         learning. I like building passion projects from scratch and learning new things to get my projects
@@ -438,8 +438,10 @@
         $('.scrollspy').scrollSpy({throttle: -100, scrollOffset: 80.5});
         $('.collapsible').collapsible();
         $(window).on("load", function () {
+            // isotope portfolio init
             const $container = $('.portfolio');
             $container.isotope({
+                percentPosition: true,
                 masonry: {
                     columnWidth: 375
                 }
@@ -454,6 +456,7 @@
                 });
                 return false;
             });
+            // typewriter init
             new TypeIt('#typer', {
                 strings: [ "Artificial Intelligence.", "Machine Learning.", "Distributed Systems.", "Web Development." ],
                 speed: 50,

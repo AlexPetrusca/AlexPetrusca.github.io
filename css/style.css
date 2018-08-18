@@ -74,7 +74,6 @@ nav {
 /* Thanks For Reading */
 .thanks-container {
     align-self: center;
-    width: 400px;
 }
 
 .thanks-title {
@@ -217,10 +216,6 @@ h4, .job-title {
     margin: auto;
 }
 
-#aboutMeContainer {
-    width: 100%;
-}
-
 /*@media (max-width: 1000px) and (min-width: 651px) {*/
     /*.flex-job-container {*/
         /*width: 650px !important;*/
@@ -251,7 +246,6 @@ h4, .job-title {
     }
     #aboutMeContainer {
         flex-direction: column;
-        width: 400px;
     }
     .thanks-title {
         margin-top: 1em;
@@ -407,15 +401,15 @@ h4, .job-title {
     margin: 0;
     text-align: left;
     position: relative;
-    width: fit-content;
+    width: 100%;
 }
 
 .hover-wrapper figure {
-    margin: 0;
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
     height: 250px;
-    width: 350px;
+    max-width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -447,7 +441,7 @@ h4, .job-title {
     padding: 10px;
     color: white;
     height: 65px;
-    width: 360px;
+    width: 100%;
     top: auto;
     bottom: 0;
     -webkit-transform: translateY(100%);
@@ -485,7 +479,7 @@ h4, .job-title {
     display: inline-block;
     background: white;
     color: dimgray;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 .hover-wrapper figcaption a:hover {
@@ -643,27 +637,14 @@ figure {
 .portfolio {
     margin: 0 auto;
     width: 1125px;
-    left: 15px;
 }
 
 .portfolio-img {
     height: 150px;
 }
 
-@media (max-width: 1171px) {
-    .portfolio {
-        width: 750px
-    }
-}
-
-@media (max-width: 796px) {
-    .portfolio {
-        width: 375px
-    }
-}
-
 .tag {
-    padding: 0 8px;
+    padding: 0 0.5rem;
 }
 
 /* Navbar */
@@ -720,20 +701,6 @@ figure {
     color: inherit;
 }
 
-@media (max-width: 700px) {
-    .valign-wrapper {
-        flex-direction: column;
-    }
-
-    .logo {
-        transform: translateX(-50%) translateX(50vw);
-    }
-
-    #nav-mobile {
-        transform: translateX(100%);
-    }
-}
-
 /* Responsiveness */
 .responsive {
     width: 60%;
@@ -749,11 +716,19 @@ figure {
     .responsive {
         width: 70%;
     }
+
+    .portfolio {
+        width: 750px;
+    }
 }
 
 @media (max-width: 992px) {
     .responsive {
         width: 80%;
+    }
+
+    .portfolio {
+        width: 350px;
     }
 
     .job-icon-side {
@@ -766,6 +741,14 @@ figure {
         width: 90%;
     }
 
+    .portfolio {
+        width: 100%;
+    }
+
+    .Portfolio-box {
+        width: 100%;
+    }
+
     .deans-honor {
         width: 90%;
     }
@@ -773,9 +756,19 @@ figure {
     .logo {
         transition: none !important;
     }
+}
 
-    #meJPG {
-        width: 90
+@media (max-width: 700px) {
+    .valign-wrapper {
+        flex-direction: column;
+    }
+
+    .logo {
+        transform: translateX(-50%) translateX(50vw);
+    }
+
+    #nav-mobile {
+        transform: translateX(100%);
     }
 }
 
@@ -901,6 +894,10 @@ figure {
 
 .ml-2 {
     margin-left: 2rem;
+}
+
+.mt-2_5 {
+    margin-top: 2.5rem;
 }
 
 .mt-3 {
