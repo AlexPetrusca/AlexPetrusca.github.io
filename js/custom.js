@@ -117,16 +117,22 @@ document.getElementById("nav-home").onclick = function() {
     document.getElementById("home-button").click();
 };
 
-document.getElementById("resume-header").onclick = function () {
-    const dropdown = document.getElementById("resume-dropdown");
-    if(dropdown.style.width === "100%") {
-        dropdown.style.width = "260px";
-        dropdown.style.background = "";
-    } else {
-        dropdown.style.width = "100%";
-        dropdown.style.background = "#f87e57";
+if(jQuery.browser.mobile) {
+    document.getElementById("resume-header").onclick = function () {
+        window.location.href = "https://drive.google.com/file/d/1TwbRPB5kwk0cImEVROLfXprZDnHN9ryr/view?usp=sharing";
     }
-};
+} else {
+    document.getElementById("resume-header").onclick = function () {
+        const dropdown = document.getElementById("resume-dropdown");
+        if (dropdown.style.width === "100%") {
+            dropdown.style.width = "260px";
+            dropdown.style.background = "";
+        } else {
+            dropdown.style.width = "100%";
+            dropdown.style.background = "#f87e57";
+        }
+    };
+}
 
 document.getElementById("award-header").onclick = function () {
     const dropdown = document.getElementById("award-dropdown");

@@ -109,7 +109,7 @@
                     <div class="flex-job-container">
                         <img class="job-icon" src="rsc/paxata.png" style="height: 14.5rem; width: 14.5rem;">
                         <div class="job-desc">
-                            <h4 class="job-title">Full-Stack Software Engineer at Paxata</h4>
+                            <h4 class="job-title">Full-Stack Software Engineer Intern at Paxata</h4>
                             <span class="job-year">2017 | REDWOOD CITY, CA</span><br>
                             <ul>
                                 <li class="job-bullet">
@@ -367,7 +367,9 @@
                 <li>
                     <div id="resume-header" class="ease-2 collapsible-header dropdown-header" tabindex="0">Read Resume</div>
                     <div class="collapsible-body dropdown-body">
-                        <div id="resumeContainer" class="center-align"></div>
+                        <div id="resumeContainer" class="center-align">
+                            <iframe id="resumeFrame" width="100%" height="100%"></iframe>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -431,50 +433,9 @@
 <script type="text/javascript" src="js/isotope.min.js"></script>
 <script type="text/javascript" src="js/progressbar.min.js"></script>
 <script type="text/javascript" src="js/typeit.min.js"></script>
-<script type="text/javascript" src="js/pdfobject.min.js"></script>
+<script type="text/javascript" src="js/detectmobile.min.js"></script>
 <!--CUSTOM SCRIPT LOADING-->
-<script type="text/javascript">
-    jQuery(document).ready(function ($) {
-        $('.parallax').parallax();
-        $('.scrollspy').scrollSpy({throttle: -100, scrollOffset: 80.5});
-        $('.collapsible').collapsible();
-        $(window).on("load", function () {
-            // isotope portfolio init
-            const $container = $('.portfolio');
-            $container.isotope({
-                percentPosition: true,
-                itemSelector: '.grid-item',
-                masonry: {
-                    columnWidth: '.grid-sizer'
-                }
-            });
-            $('.portfolioFilter a').click(function () {
-                $('.portfolioFilter .current').removeClass('current');
-                $(this).addClass('current');
-
-                const selector = $(this).attr('data-filter');
-                $container.isotope({
-                    filter: selector
-                });
-                return false;
-            });
-            // typewriter init
-            new TypeIt('#typer', {
-                strings: [ "Artificial Intelligence.", "Machine Learning.", "Distributed Systems.", "Web Development." ],
-                speed: 50,
-                breakLines: false,
-                autoStart: false,
-                loop: true,
-                nextStringDelay: 2500
-            });
-        });
-    });
-    var options = {
-        height: "80vw",
-        pdfOpenParams: { view: 'FitV' }
-    };
-    PDFObject.embed("rsc/resume.pdf", "#resumeContainer", options);
-</script>
+<script type="text/javascript" src="js/init.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/canvas.js"></script>
 </body>

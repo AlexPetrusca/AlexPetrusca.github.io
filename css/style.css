@@ -46,6 +46,11 @@ nav {
     height: 80px !important;
 }
 
+iframe {
+    overflow: hidden;
+    border: none;
+}
+
 .subheading {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -86,7 +91,8 @@ nav {
 
 .thanks-desc {
     text-align: justify;
-    color: #383838;
+    /*color: #48750d;*/
+    color: #375213;
     font-size: 1.25em;
 }
 
@@ -666,6 +672,10 @@ figure {
     transition: all 0.2s ease-in-out;
 }
 
+#resumeContainer {
+    height: calc(1.2939 * (60vw - 4rem));
+}
+
 .grid-sizer,
 .grid-item {
     width: 33%;
@@ -682,6 +692,10 @@ figure {
 @media (max-width: 1200px) {
     .responsive {
         width: 70%;
+    }
+
+    #resumeContainer {
+        height: calc(1.2939 * (70vw - 4rem));
     }
 
     #meJPG {
@@ -701,6 +715,10 @@ figure {
 @media (max-width: 992px) {
     .responsive {
         width: 80%;
+    }
+
+    #resumeContainer {
+        height: calc(1.2939 * (80vw - 4rem));
     }
 
     .grid-sizer, .grid-item {
@@ -742,6 +760,10 @@ figure {
 @media (max-width: 600px) {
     .responsive {
         width: 90%;
+    }
+
+    #resumeContainer {
+        height: calc(1.2939 * (90vw - 4rem));
     }
 
     .deans-honor {
