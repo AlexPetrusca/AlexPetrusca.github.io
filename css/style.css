@@ -673,7 +673,7 @@ figure {
 }
 
 #resumeContainer {
-    height: calc(1.2939 * (60vw - 4rem));
+    height: calc(1.284 * (60vw - 4rem));
 }
 
 .grid-sizer,
@@ -695,7 +695,7 @@ figure {
     }
 
     #resumeContainer {
-        height: calc(1.2939 * (70vw - 4rem));
+        height: calc(1.284 * (70vw - 4rem));
     }
 
     #meJPG {
@@ -718,7 +718,7 @@ figure {
     }
 
     #resumeContainer {
-        height: calc(1.2939 * (80vw - 4rem));
+        height: calc(1.284 * (80vw - 4rem));
     }
 
     .grid-sizer, .grid-item {
@@ -763,7 +763,7 @@ figure {
     }
 
     #resumeContainer {
-        height: calc(1.2939 * (90vw - 4rem));
+        height: calc(1.284 * (90vw - 4rem));
     }
 
     .deans-honor {
