@@ -1,4 +1,10 @@
-let nav = document.getElementById("top-nav");
+let topNav = document.getElementById("top-nav");
+let navHome = document.getElementById("nav-home");
+let homeButton = document.getElementById("home-button");
+let resumeHeader = document.getElementById("resume-header");
+let resumeDropdown = document.getElementById("resume-dropdown");
+let awardHeader = document.getElementById("award-header");
+let awardDropdown = document.getElementById("award-dropdown");
 let row1 = document.getElementById("skillsRow");
 let row1_activated = false;
 
@@ -97,11 +103,11 @@ window.onscroll = function () {
     let scrollTop = window.scrollY;
     let scrollBot = scrollTop + window.innerHeight;
     if (scrollTop > 10) {
-        nav.classList.remove("nav-transparent");
-        nav.classList.add("nav-solid");
+        topNav.classList.remove("nav-transparent");
+        topNav.classList.add("nav-solid");
     } else {
-        nav.classList.remove("nav-solid");
-        nav.classList.add("nav-transparent");
+        topNav.classList.remove("nav-solid");
+        topNav.classList.add("nav-transparent");
     }
 
     if (!row1_activated ) {
@@ -111,36 +117,35 @@ window.onscroll = function () {
         }
     }
 };
-window.onscroll();
-
-document.getElementById("nav-home").onclick = function() {
-    document.getElementById("home-button").click();
-};
+window.onscroll(null);
 
 if(jQuery.browser.mobile) {
-    document.getElementById("resume-header").onclick = function () {
-        window.location.href = "https://drive.google.com/file/d/1TwbRPB5kwk0cImEVROLfXprZDnHN9ryr/view?usp=sharing";
+    resumeHeader.classList.remove("collapsible-header");
+    resumeHeader.onclick = function () {
+        window.location.href = "https://drive.google.com/file/d/1TwbRPB5kwk0cImEVROLfXprZDnHN9ryr/preview?usp=sharing&rm=minimal";
     }
 } else {
-    document.getElementById("resume-header").onclick = function () {
-        const dropdown = document.getElementById("resume-dropdown");
-        if (dropdown.style.width === "100%") {
-            dropdown.style.width = "260px";
-            dropdown.style.background = "";
+    resumeHeader.onclick = function () {
+        if (resumeDropdown.style.width === "100%") {
+            resumeDropdown.style.width = "260px";
+            resumeDropdown.style.background = "";
         } else {
-            dropdown.style.width = "100%";
-            dropdown.style.background = "#f87e57";
+            resumeDropdown.style.width = "100%";
+            resumeDropdown.style.background = "#f87e57";
         }
     };
 }
 
-document.getElementById("award-header").onclick = function () {
-    const dropdown = document.getElementById("award-dropdown");
-    if(dropdown.style.width === "100%") {
-        dropdown.style.width = "230px";
-        dropdown.style.background = "";
+awardHeader.onclick = function () {
+    if(awardDropdown.style.width === "100%") {
+        awardDropdown.style.width = "230px";
+        awardDropdown.style.background = "";
     } else {
-        dropdown.style.width = "100%";
-        dropdown.style.background = "#f87e57";
+        awardDropdown.style.width = "100%";
+        awardDropdown.style.background = "#f87e57";
     }
+};
+
+navHome.onclick = function() {
+    homeButton.click();
 };

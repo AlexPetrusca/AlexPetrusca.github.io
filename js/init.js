@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
         $('.parallax').parallax();
     }
     // materialize init
+    $('.sidenav').sidenav();
     $('.scrollspy').scrollSpy({throttle: -100, scrollOffset: 80.5});
     $('.collapsible').collapsible();
     $(window).on("load", function () {

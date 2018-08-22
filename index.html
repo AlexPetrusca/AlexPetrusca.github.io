@@ -11,41 +11,52 @@
 </head>
 <body>
 <div id="siteWrapper" style="overflow: hidden;">
-    <div class="navbar-fixed">
-        <nav id="top-nav" class="ease-2 nav-transparent">
-            <div class="nav-wrapper">
-                <a id="nav-home" href="#" class="ease-2 logo">
-                    <svg id="logo" class="ml-0_5 mr-1" style="height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.5 72">
-                        <g>
-                            <line class="cls-1" x1="16.01" y1="18" x2="23.14" y2="28.62"></line>
-                            <line class="cls-1" x1="33.57" y1="42.59" x2="40.7" y2="53.21"></line>
-                            <line class="cls-1" x1="23.38" y1="42.59" x2="16.25" y2="53.21"></line>
-                            <circle class="cls-2" cx="11.21" cy="10.72" r="8.72"></circle>
-                            <circle class="cls-2" cx="29.38" cy="34.71" r="8.72"></circle>
-                            <circle class="cls-2" cx="45.77" cy="60.75" r="8.72"></circle>
-                            <circle class="cls-2" cx="10.72" cy="61.28" r="8.72"></circle>
-                        </g>
-                    </svg>
-                    <span class="kern">Alex<br/>Petrusca</span>
-                </a>
-                <ul id="nav-mobile" class="ease-2-transform table-of-contents">
-                    <li><a id="home-button" href="#home">Home</a></li>
-                    <li><a id="skills-button" href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
     <main>
+        <div class="navbar-fixed">
+            <nav id="top-nav" class="ease-2 nav-transparent">
+                <div class="nav-wrapper">
+                    <a id="nav-home" href="#" class="ease-2 logo">
+                        <svg id="logo" class="ml-0_5 mr-1" style="height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.5 72">
+                            <g>
+                                <line class="cls-1" x1="16.01" y1="18" x2="23.14" y2="28.62"></line>
+                                <line class="cls-1" x1="33.57" y1="42.59" x2="40.7" y2="53.21"></line>
+                                <line class="cls-1" x1="23.38" y1="42.59" x2="16.25" y2="53.21"></line>
+                                <circle class="cls-2" cx="11.21" cy="10.72" r="8.72"></circle>
+                                <circle class="cls-2" cx="29.38" cy="34.71" r="8.72"></circle>
+                                <circle class="cls-2" cx="45.77" cy="60.75" r="8.72"></circle>
+                                <circle class="cls-2" cx="10.72" cy="61.28" r="8.72"></circle>
+                            </g>
+                        </svg>
+                        <span class="kern">Alex<br/>Petrusca</span>
+                    </a>
+                    <a id="mobileToggle" href="#" data-target="nav-mobile" class="ease-2 sidenav-trigger">
+                        <i id="mobileToggleIcon" class="large material-icons">menu</i>
+                    </a>
+                    <ul id="nav-desktop" class="ease-2-transform table-of-contents">
+                        <li><a class="desktopAnchor" id="home-button" href="#home">Home</a></li>
+                        <li><a class="desktopAnchor" id="skills-button" href="#skills">Skills</a></li>
+                        <li><a class="desktopAnchor" href="#experience">Experience</a></li>
+                        <li><a class="desktopAnchor" href="#education">Education</a></li>
+                        <li><a class="desktopAnchor" href="#projects">Projects</a></li>
+                        <li><a class="desktopAnchor" href="#resume">Resume</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul id="nav-mobile" class="sidenav raleway table-of-contents">
+            <li><a class="mobileAnchor" href="#home">Home</a></li>
+            <li><a class="mobileAnchor" href="#skills">Skills</a></li>
+            <li><a class="mobileAnchor" href="#experience">Experience</a></li>
+            <li><a class="mobileAnchor" href="#education">Education</a></li>
+            <li><a class="mobileAnchor" href="#projects">Projects</a></li>
+            <li><a class="mobileAnchor" href="#resume">Resume</a></li>
+        </ul>
+
         <!--HOME-->
         <div id="home" class="scrollspy hero">
             <div class="hero parallax-container">
                 <div class="parallax"><img class="hero-img" src="rsc/hero-new.jpg"></div>
                 <!--<div class="parallax"><img src="rsc/ucsc/hero-min.jpg"></div>-->
-                <!--<canvas id="hero-canvas" width="2000" height="400"></canvas>-->
             </div>
             <div class="hero-container container ease-2">
                 <div class="hero-title-container">
@@ -97,8 +108,7 @@
             </div>
         </div>
         <div class="parallax-container">
-            <canvas id="skills-canvas" width="2000" height="425"></canvas>
-            <div class="parallax lighten"><img src="rsc/ucsc/ucsc7-min-new.jpg"></div>
+            <div class="parallax lighten"><img src="rsc/ucsc/ucsc7-min.jpg" style="transform: translate3d(-50%, 325px, 0px);"></div>
         </div>
 
         <!--EXPERIENCE-->
@@ -129,8 +139,7 @@
             <div class="pb-5"></div>
         </div>
         <div class="parallax-container">
-            <canvas id="experience-canvas" width="2000" height="425"></canvas>
-            <div class="parallax lighten"><img src="rsc/ucsc/ucsc3-min-new.jpg"></div>
+            <div class="parallax lighten"><img src="rsc/ucsc/ucsc3-min.jpg" style="transform: translate3d(-50%, 500px, 0px);"></div>
         </div>
 
         <!--EDUCATION-->
@@ -243,8 +252,7 @@
             <div class="pb-5"></div>
         </div>
         <div class="parallax-container">
-            <canvas id="education-canvas" width="2000" height="425"></canvas>
-            <div class="parallax lighten"><img src="rsc/ucsc/ucsc10-min-new.jpg"></div>
+            <div class="parallax lighten"><img src="rsc/ucsc/ucsc10.jpg" style="transform: translate3d(-50%, 160px, 0px);"></div>
         </div>
 
         <!--PROJECTS-->
@@ -254,9 +262,9 @@
                 <div class="portfolioFilter">
                     <ul class="Portfolio-nav">
                         <li><a href="#" data-filter="*" class="current waves-effect waves-light raleway" id="all">All</a></li>
-                        <li><a href="#" data-filter=".ai" class="waves-effect waves-light raleway">Artificial Intelligence</a></li>
+                        <li><a href="#" data-filter=".ai" class="waves-effect waves-light raleway">AI</a></li>
                         <li><a href="#" data-filter=".graphics" class="waves-effect waves-light raleway">Graphics</a></li>
-                        <li><a href="#" data-filter=".misc" class="waves-effect waves-light raleway">Miscellaneous</a></li>
+                        <li><a href="#" data-filter=".misc" class="waves-effect waves-light raleway">Misc</a></li>
                     </ul>
                 </div>
             </div>
@@ -290,7 +298,7 @@
                         </figure>
                     </div>
                     <h5>Connect Four Engine</h5>
-                    <p>Artificial Intelligence</p>
+                    <p>AI</p>
                 </div>
                 <div class="Portfolio-box grid-item ai">
                     <div class="hover-wrapper">
@@ -356,8 +364,7 @@
             <div class="pb-2"></div>
         </div>
         <div class="parallax-container">
-            <canvas id="projects-canvas" width="2000" height="425"></canvas>
-            <div class="parallax lighten"><img src="rsc/ucsc/ucsc1-min-new.jpg"></div>
+            <div class="parallax lighten"><img src="rsc/ucsc/ucsc1-min.jpg" style="transform: translate3d(-50%, 375px, 0px);"></div>
         </div>
 
         <!--RESUME-->
@@ -437,6 +444,5 @@
 <!--CUSTOM SCRIPT LOADING-->
 <script type="text/javascript" src="js/init.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
-<script type="text/javascript" src="js/canvas.js"></script>
 </body>
 </html>
