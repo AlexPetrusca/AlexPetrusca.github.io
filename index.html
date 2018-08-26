@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:url" content="https://alexpetrusca.github.io/">
+    <meta property="og:title" content="Alex Petrusca">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Computer science student at UCSC. Software engineer.">
+    <meta property="og:image" content="https://alexpetrusca.github.io/rsc/hero-new.jpg">
     <title>Alex's Webpage</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,7 +21,7 @@
             <nav id="top-nav" class="ease-2 nav-transparent">
                 <div class="nav-wrapper">
                     <a id="nav-home" href="#" class="ease-2 logo">
-                        <svg id="logo" class="ml-0_5 mr-1" style="height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.5 72">
+                        <svg id="logo" class="ml-0_5 mr-1" style="height: 52px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.5 72">
                             <g>
                                 <line class="cls-1" x1="16.01" y1="18" x2="23.14" y2="28.62"></line>
                                 <line class="cls-1" x1="33.57" y1="42.59" x2="40.7" y2="53.21"></line>
@@ -27,7 +32,7 @@
                                 <circle class="cls-2" cx="10.72" cy="61.28" r="8.72"></circle>
                             </g>
                         </svg>
-                        <span class="kern">Alex<br/>Petrusca</span>
+                        <div class="kern">Alex<br/>Petrusca</div>
                     </a>
                     <a id="mobileToggle" href="#" data-target="nav-mobile" class="ease-2 sidenav-trigger">
                         <i id="mobileToggleIcon" class="large material-icons">menu</i>
@@ -54,7 +59,7 @@
 
         <!--HOME-->
         <div id="home" class="scrollspy hero">
-            <div class="hero parallax-container">
+            <div class="hero parallax-container" style="height: 100vh!important;">
                 <div class="parallax"><img class="hero-img" src="rsc/hero-new.jpg"></div>
                 <!--<div class="parallax"><img src="rsc/ucsc/hero-min.jpg"></div>-->
             </div>
@@ -73,11 +78,11 @@
         <!--SKILLS-->
         <div id="skills" class="scrollspy responsive">
             <div class="center-align raleway">
-                <h2 class="mt-0 pt-5 mb-2">Skills</h2>
+                <h2 class="mt-0 pt-4 mb-2">Skills</h2>
                 <h6 class="mb-4 center-9">My relevant computer programming skills. High ratings correspond to "very
                     comfortable with" and low ratings correspond to "not very comfortable with."</h6>
                 <div id="skillsRow">
-                    <div class="flex skill">
+                    <div class="flex-row skill">
                         <div class="flex-row">
                             <div id="progressJava" class="progress-semi"></div>
                             <div id="progressCplusplus" class="progress-semi"></div>
@@ -87,7 +92,7 @@
                             <div id="progressPython" class="progress-semi"></div>
                         </div>
                     </div>
-                    <div class="flex skill">
+                    <div class="flex-row skill">
                         <div class="flex-row">
                             <div id="progressJavascript" class="progress-semi"></div>
                             <div id="progressHTML" class="progress-semi"></div>
@@ -114,14 +119,14 @@
         <!--EXPERIENCE-->
         <div id="experience" class="scrollspy responsive">
             <div class="center-align">
-                <h2 class="mt-0 pt-5 mb-2">Experience</h2>
-                <div class="row">
+                <h2 class="mt-0 pt-4 mb-2">Experience</h2>
+                <div class="mb-0i row">
                     <div class="flex-job-container">
-                        <img class="job-icon" src="rsc/paxata.png" style="height: 14.5rem; width: 14.5rem;">
+                        <img class="job-icon" src="rsc/paxata.png" style="height: 15.5rem; width: 15.5rem;">
                         <div class="job-desc">
                             <h4 class="job-title">Full-Stack Software Engineer Intern at Paxata</h4>
                             <span class="job-year">2017 | REDWOOD CITY, CA</span><br>
-                            <ul>
+                            <ul class="mb-0i">
                                 <li class="job-bullet">
                                     Used Agile to develop a landing page that expedites common workflows and minimizes data inconsistencies
                                 </li>
@@ -139,20 +144,20 @@
             <div class="pb-5"></div>
         </div>
         <div class="parallax-container">
-            <div class="parallax lighten"><img src="rsc/ucsc/ucsc3-min.jpg" style="transform: translate3d(-50%, 500px, 0px);"></div>
+            <div class="parallax lighten"><img src="rsc/ucsc/ucsc6-min.jpg" style="transform: translate3d(-50%, 500px, 0px);"></div>
         </div>
 
         <!--EDUCATION-->
         <div id="education" class="scrollspy responsive">
             <div class="center-align">
-                <h2 class="mt-0 pt-5 mb-2">Education</h2>
+                <h2 class="mt-0 pt-4 mb-2">Education</h2>
                 <div class="mb-1 flex-row">
                     <img class="job-icon-side mr-3" src="rsc/education/sharp2.jpg" style="height:200px">
                     <img class="job-icon" src="rsc/education/uc-logo.png" style="height:300px">
                     <img class="job-icon-side ml-3" src="rsc/education/sharp.jpg" style="height:200px">
                 </div>
                 <h5 class="kern mt-2" style="color:black; font-weight:700;">UNIVERSITY OF CALIFORNIA, SANTA CRUZ</h5>
-                <div class="deans-container">
+                <div>
                     <h5 class="mb-2 mt-0_5 raleway">Computer Science B.S., Class of 2020</h5>
                     <ul id="award-dropdown" class="collapsible center-align button-dropdown ease-2" style="width: 230px">
                         <li>
@@ -167,12 +172,12 @@
                         </li>
                     </ul>
 
-                    <div class="pb-2"></div>
+                    <div class="pb-2_5"></div>
                     <hr>
-                    <div class="mb-2"></div>
+                    <div class="mb-2_5"></div>
 
-                    <h4 class="subheading pt-1 mb-2">Relevant Coursework</h4>
-                    <ul class="collapsible left-align">
+                    <h4 class="subheading mt-2 mb-2 pt-0">Relevant Coursework</h4>
+                    <ul class="collapsible left-align mb-0i">
                         <li>
                             <div class="collapsible-header pl-2i">
                                 <i class="small material-icons number-label">looks_one</i>
@@ -258,7 +263,7 @@
         <!--PROJECTS-->
         <div id="projects" class="scrollspy responsive">
             <div class="center-align">
-                <h2 class="mt-0 pt-5 mb-2">Projects</h2>
+                <h2 class="mt-0 pt-4 mb-2">Projects</h2>
                 <div class="portfolioFilter">
                     <ul class="Portfolio-nav">
                         <li><a href="#" data-filter="*" class="current waves-effect waves-light raleway" id="all">All</a></li>
@@ -342,7 +347,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <h5>x86 Assembly Computer Virus</h5>
+                    <h5>x86 Assembly Virus</h5>
                     <p>Miscellaneous</p>
                 </div>
                 <div class="Portfolio-box grid-item graphics">
@@ -369,8 +374,8 @@
 
         <!--RESUME-->
         <div id="resume" class="scrollspy responsive">
-            <h2 class="mt-0 pt-5 mb-2 center-align">Resume</h2>
-            <ul id="resume-dropdown" class="collapsible center-align button-dropdown ease-2">
+            <h2 class="mt-0 pt-4 mb-2 center-align">Resume</h2>
+            <ul id="resume-dropdown" class="mb-0i collapsible center-align button-dropdown ease-2">
                 <li>
                     <div id="resume-header" class="ease-2 collapsible-header dropdown-header" tabindex="0">Read Resume</div>
                     <div class="collapsible-body dropdown-body">
@@ -416,11 +421,11 @@
                     </div>
                     <div class="center-9">
                         <div class="col s12 m6 mt-1_5 mb-1_5">
-                            <a href="https://github.com/AlexPetrusca"><img src="rsc/github.png"></a>
+                            <a href="https://github.com/AlexPetrusca"><img class="icon" src="rsc/github.svg"></a>
                             <a href="https://github.com/AlexPetrusca"><p class="white-text">AlexPetrusca</p></a>
                         </div>
                         <div class="col s12 m6 mt-1_5 mb-1_5">
-                            <a href="https://www.linkedin.com/in/alexandru-petrusca"><img src="rsc/linkedin.png"></a>
+                            <a href="https://www.linkedin.com/in/alexandru-petrusca"><img class="icon" src="rsc/linkedin.svg"></a>
                             <a href="https://www.linkedin.com/in/alexandru-petrusca"><p class="white-text">alexandru-petrusca</p></a>
                         </div>
                     </div>

@@ -5,8 +5,8 @@ let resumeHeader = document.getElementById("resume-header");
 let resumeDropdown = document.getElementById("resume-dropdown");
 let awardHeader = document.getElementById("award-header");
 let awardDropdown = document.getElementById("award-dropdown");
-let row1 = document.getElementById("skillsRow");
-let row1_activated = false;
+let row = document.getElementById("skillsRow");
+let row_activated = false;
 
 let progressOptions = {
     color: 'rgb(4, 83, 170)',
@@ -110,10 +110,10 @@ window.onscroll = function () {
         topNav.classList.add("nav-transparent");
     }
 
-    if (!row1_activated ) {
-        if (scrollBot > row1.offsetTop && scrollTop < row1.offsetTop + row1.offsetHeight) {
+    if (!row_activated ) {
+        if (scrollBot > row.offsetTop && scrollTop < row.offsetTop + row.offsetHeight) {
             activateRow1();
-            row1_activated = true;
+            row_activated = true;
         }
     }
 };

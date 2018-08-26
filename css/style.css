@@ -28,7 +28,7 @@ p {
 }
 
 h6 {
-    line-height: unset!important;
+    line-height: unset !important;
 }
 
 h1, h2 {
@@ -79,6 +79,8 @@ iframe {
 /* Thanks For Reading */
 .thanks-container {
     align-self: center;
+    min-width: 370px;
+    max-width: 450px;
 }
 
 .thanks-title {
@@ -127,6 +129,7 @@ iframe {
 }
 
 .dropdown-body {
+    padding: 1rem 2rem 2rem 2rem !important;
     border-bottom: 0 !important;
     margin: auto;
 }
@@ -152,7 +155,7 @@ iframe {
 /* Separator */
 hr {
     border: 0;
-    height: 2px!important;
+    height: 2px !important;
     width:175px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #a4de2b, rgba(0, 0, 0, 0));
 }
@@ -173,7 +176,8 @@ hr:after {
     outline: none;
 }
 
-.collapsible-body {
+#award-dropdown{
+    margin: auto !important;
 }
 
 .number-label {
@@ -211,7 +215,7 @@ h4, .job-title {
 }
 
 .job-desc {
-    padding-left: 30px;
+    padding-left: 2.5rem;
 }
 
 .flex-job-container {
@@ -220,10 +224,7 @@ h4, .job-title {
     justify-content: center;
     text-align: left;
     margin: auto;
-}
-
-.deans-container {
-    margin-bottom: 1.2em;
+    align-items: center;
 }
 
 .raleway {
@@ -256,7 +257,7 @@ h4, .job-title {
 }
 
 .progress-semi {
-    margin-bottom: 3rem!important;
+    margin-bottom: 3rem !important;
     margin-right: 1rem;
     margin-left: 1rem;
     max-width: 200px;
@@ -530,6 +531,15 @@ figure {
     stroke: gray;
 }
 
+.sidenav li>a:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.sidenav {
+    width: 50vw !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
 .Portfolio-nav {
     padding: 0;
     margin: 0 0 45px 0;
@@ -549,7 +559,7 @@ figure {
     line-height: 20px;
     color: #222222;
     border-radius: 4px;
-    background: #f7f7f7;
+    background-color: rgba(0, 0, 0, 0.1);;
     margin-bottom: 5px;
     transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -612,7 +622,7 @@ figure {
 }
 
 #mobileToggleIcon {
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: unset;
     height: unset;
 }
@@ -624,10 +634,10 @@ figure {
 }
 
 .sidenav li>a {
-    font-size: 2em!important;
-    font-weight: 700!important;
-    height: 2em!important;
-    line-height: 2em!important;
+    font-size: 2em !important;
+    font-weight: 700 !important;
+    height: 2em !important;
+    line-height: 2em !important;
 }
 
 .navbar-fixed {
@@ -652,7 +662,8 @@ figure {
     padding-left: 0 !important;
     font-family: 'Raleway', sans-serif;
     font-weight: bold !important;
-    font-size: 16px;
+    font-size: 1.2em;
+    vertical-align: middle;
     background-color: transparent !important;
     -webkit-transition: color 0.2s ease-in-out;
     -moz-transition: color 0.2s ease-in-out;
@@ -680,7 +691,7 @@ figure {
 }
 
 .logo {
-    font-size: 1.5rem !important;
+    font-size: 1.8rem !important;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     padding-left: 0.5rem;
@@ -690,9 +701,15 @@ figure {
     color: inherit;
 }
 
+.icon {
+    padding: 1px;
+    height: 29px;
+    width: 29px;
+}
+
 /* Responsiveness */
 .responsive {
-    width: 60%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
     -webkit-transition: all 0.2s ease-in-out;
@@ -737,7 +754,7 @@ figure {
     }
 
     .thanks-title {
-        padding-top: 2.5rem!important;
+        padding-top: 2.5rem !important;
     }
 }
 
@@ -769,7 +786,7 @@ figure {
     }
 
     .job-desc {
-        padding-left: 0!important;
+        padding-left: 0 !important;
     }
 
     .job-title {
@@ -781,8 +798,8 @@ figure {
     }
 
     .progress-semi {
-        margin-right: 2.5rem!important;
-        margin-left: 2.5rem!important;
+        margin-right: 2.5rem !important;
+        margin-left: 2.5rem !important;
     }
 }
 
@@ -795,8 +812,20 @@ figure {
         height: calc(1.285 * (90vw - 4rem));
     }
 
+    .parallax-container {
+        height: 325px !important;
+    }
+
+    .Portfolio-box {
+        height: auto;
+    }
+
     .hero-title {
         font-size: 10vh
+    }
+
+    .thanks-container {
+        min-width: unset;
     }
 
     .deans-honor {
@@ -808,9 +837,9 @@ figure {
     }
 
     .progress-semi {
-        margin-right: 1rem!important;
-        margin-left: 1rem!important;
-        margin-bottom: 2rem!important;
+        margin-right: 1rem !important;
+        margin-left: 1rem !important;
+        margin-bottom: 2rem !important;
     }
 
     .hero-title-container {
@@ -819,10 +848,11 @@ figure {
 
     .hero-container {
         top: 20%;
+        height: 100vh !important;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .valign-wrapper {
         flex-direction: column;
     }
@@ -970,6 +1000,18 @@ figure {
     margin-top: 2.5rem;
 }
 
+.mb-2_5 {
+    margin-bottom: 2.5rem;
+}
+
+.mr-2_5 {
+    margin-right: 2.5rem;
+}
+
+.ml-2_5 {
+    margin-left: 2.5rem;
+}
+
 .mt-3 {
     margin-top: 3rem;
 }
@@ -1023,23 +1065,23 @@ figure {
 }
 
 .mb-1i {
-    margin-bottom: 1rem!important;
+    margin-bottom: 1rem !important;
 }
 
 .mb-2i {
-    margin-bottom: 2rem!important;
+    margin-bottom: 2rem !important;
 }
 
 .mb-3i {
-    margin-bottom: 3rem!important;
+    margin-bottom: 3rem !important;
 }
 
 .mb-4i {
-    margin-bottom: 4rem!important;
+    margin-bottom: 4rem !important;
 }
 
 .mb-5i {
-    margin-bottom: 5rem!important;
+    margin-bottom: 5rem !important;
 }
 
 .m0 {
@@ -1117,6 +1159,22 @@ figure {
 
 .pl-2 {
     padding-left: 2rem;
+}
+
+.pt-2_5 {
+    padding-top: 2.5rem;
+}
+
+.pb-2_5 {
+    padding-bottom: 2.5rem;
+}
+
+.pr-2_5 {
+    padding-right: 2.5rem;
+}
+
+.pl-2_5 {
+    padding-left: 2.5rem;
 }
 
 .pt-3 {
