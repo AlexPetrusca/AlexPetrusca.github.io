@@ -176,6 +176,11 @@ hr:after {
     outline: none;
 }
 
+.outline-click {
+    outline: none;
+    cursor: pointer;
+}
+
 #award-dropdown{
     margin: auto !important;
 }
