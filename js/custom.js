@@ -119,22 +119,22 @@ window.onscroll = function () {
 };
 window.onscroll(null);
 
-// if(jQuery.browser.mobile) {
-//     resumeHeader.classList.remove("collapsible-header");
+if(jQuery.browser.mobile) {
+    resumeHeader.classList.remove("collapsible-header");
     resumeHeader.onclick = function () {
         window.location.href = "https://drive.google.com/file/d/1TwbRPB5kwk0cImEVROLfXprZDnHN9ryr/preview?usp=sharing&rm=minimal";
     };
-// } else {
-//     resumeHeader.onclick = function () {
-//         if (resumeDropdown.style.width === "100%") {
-//             resumeDropdown.style.width = "260px";
-//             resumeDropdown.style.background = "";
-//         } else {
-//             resumeDropdown.style.width = "100%";
-//             resumeDropdown.style.background = "#f87e57";
-//         }
-//     };
-// }
+} else {
+    resumeHeader.onclick = function () {
+        if (resumeDropdown.style.width === "100%") {
+            resumeDropdown.style.width = "260px";
+            resumeDropdown.style.background = "";
+        } else {
+            resumeDropdown.style.width = "100%";
+            resumeDropdown.style.background = "#f87e57";
+        }
+    };
+}
 
 awardHeader.onclick = function () {
     if(awardDropdown.style.width === "100%") {
