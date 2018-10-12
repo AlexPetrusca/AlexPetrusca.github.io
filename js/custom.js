@@ -46,7 +46,7 @@ jQuery(document).ready(function ($) {
         progressOptions.trailColor = 'rgba(4, 83, 170, 0.2)';
         progressOptions.to.color = 'rgb(4, 83, 170)';
         progressOptions.from.color = 'rgb(4, 83, 170)';
-        new ProgressBar.Circle('#progressJava', progressOptions).animate(0.9);
+        new ProgressBar.Circle('#progressJava', progressOptions).animate(0.925);
 
         progressOptions.text.value = 'HTML';
         progressOptions.color = 'rgb(239, 162, 50)';
@@ -60,28 +60,28 @@ jQuery(document).ready(function ($) {
         progressOptions.trailColor = 'rgba(113, 128, 205, 0.2)';
         progressOptions.to.color = 'rgb(113, 128, 205)';
         progressOptions.from.color = 'rgb(113, 128, 205)';
-        new ProgressBar.Circle('#progressCplusplus', progressOptions).animate(0.4);
+        new ProgressBar.Circle('#progressCplusplus', progressOptions).animate(0.55);
 
         progressOptions.text.value = 'Python';
         progressOptions.color = 'rgb(75, 152, 90)';
         progressOptions.trailColor = 'rgba(75, 152, 90, 0.2)';
         progressOptions.to.color = 'rgb(75, 152, 90)';
         progressOptions.from.color = 'rgb(75, 152, 90)';
-        new ProgressBar.Circle('#progressPython', progressOptions).animate(0.2);
+        new ProgressBar.Circle('#progressPython', progressOptions).animate(0.85);
 
         progressOptions.text.value = 'JS';
         progressOptions.color = 'rgb(207, 92, 56)';
         progressOptions.trailColor = 'rgba(207, 92, 56, 0.2)';
         progressOptions.to.color = 'rgb(207, 92, 56)';
         progressOptions.from.color = 'rgb(207, 92, 56)';
-        new ProgressBar.Circle('#progressJavascript', progressOptions).animate(0.85);
+        new ProgressBar.Circle('#progressJavascript', progressOptions).animate(0.9);
 
         progressOptions.text.value = 'Scala';
         progressOptions.color = 'rgb(164, 222, 44)';
         progressOptions.trailColor = 'rgba(164, 222, 44, 0.2)';
         progressOptions.to.color = 'rgb(164, 222, 44)';
         progressOptions.from.color = 'rgb(164, 222, 44)';
-        new ProgressBar.Circle('#progressScala', progressOptions).animate(0.4);
+        new ProgressBar.Circle('#progressScala', progressOptions).animate(0.65);
 
         progressOptions.text.value = 'C';
         progressOptions.color = 'rgb(92, 193, 176)';
@@ -95,7 +95,7 @@ jQuery(document).ready(function ($) {
         progressOptions.trailColor = 'rgba(136, 109, 155, 0.2)';
         progressOptions.to.color = 'rgb(136, 109, 155)';
         progressOptions.from.color = 'rgb(136, 109, 155)';
-        new ProgressBar.Circle('#progressCSS', progressOptions).animate(0.85);
+        new ProgressBar.Circle('#progressCSS', progressOptions).animate(0.9);
     }
 
     /*
