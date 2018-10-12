@@ -1,9 +1,9 @@
 jQuery(document).ready(function ($) {
     if(jQuery.browser.mobile) {
-        // if mobile, turn off parallax and embeddedPDF
+        // if mobile, turn off parallax
         $('.parallax img').css("opacity", 1)
     } else {
-        // if desktop, turn on parallax and embedded PDF
+        // if desktop, turn on parallax
         $('.parallax').parallax();
     }
     // materialize init
@@ -11,7 +11,6 @@ jQuery(document).ready(function ($) {
     $('.scrollspy').scrollSpy({throttle: -100, scrollOffset: 80.5});
     $('.collapsible').collapsible();
     $(window).on("load", function () {
-        $('#resumeFrame').attr("src", "https://drive.google.com/file/d/1TwbRPB5kwk0cImEVROLfXprZDnHN9ryr/preview");
         // isotope portfolio init
         const $container = $('.portfolio');
         $container.isotope({

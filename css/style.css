@@ -38,7 +38,6 @@ h1, h2 {
 
 h5 {
     font-family: "Raleway", sans-serif;
-    font-weight: 200;
     color: #f87e57;
 }
 
@@ -176,9 +175,20 @@ hr:after {
     outline: none;
 }
 
-.outline-click {
-    outline: none;
-    cursor: pointer;
+#resume-frame {
+    position: relative;
+    z-index: 2;
+}
+
+#resume-container {
+    background: #cfcfcf;
+}
+
+#resume-progress {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    margin: 0;
 }
 
 #award-dropdown{
@@ -723,8 +733,9 @@ figure {
     transition: all 0.2s ease-in-out;
 }
 
-#resumeContainer {
+#resume-container {
     height: calc(1.285 * (60vw - 4rem));
+    position: relative;
 }
 
 .grid-sizer,
@@ -745,7 +756,7 @@ figure {
         width: 70%;
     }
 
-    #resumeContainer {
+    #resume-container {
         height: calc(1.285 * (70vw - 4rem));
     }
 
@@ -768,7 +779,7 @@ figure {
         width: 80%;
     }
 
-    #resumeContainer {
+    #resume-container {
         height: calc(1.285 * (80vw - 4rem));
     }
 
@@ -813,7 +824,7 @@ figure {
         width: 90%;
     }
 
-    #resumeContainer {
+    #resume-container {
         height: calc(1.285 * (90vw - 4rem));
     }
 

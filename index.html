@@ -13,8 +13,8 @@
     <title>Alex's Webpage</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/materialize.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <div id="siteWrapper" style="overflow: hidden;">
@@ -381,8 +381,11 @@
                 <li>
                     <div id="resume-header" class="ease-2 collapsible-header dropdown-header" tabindex="0">Read Resume</div>
                     <div class="collapsible-body dropdown-body">
-                        <div id="resumeContainer" class="center-align">
-                            <iframe id="resumeFrame" width="100%" height="100%"></iframe>
+                        <div id="resume-container" class="center-align">
+                            <div id="resume-progress" class="progress">
+                                <div class="indeterminate"></div>
+                            </div>
+                            <iframe id="resume-frame" width="100%" height="100%"></iframe>
                         </div>
                     </div>
                 </li>
