@@ -77,7 +77,7 @@ iframe {
 
 /* Thanks For Reading */
 .thanks-container {
-    align-self: center;
+    align-self: flex-start;
     min-width: 370px;
     max-width: 450px;
 }
@@ -180,10 +180,6 @@ hr:after {
     z-index: 2;
 }
 
-#resume-container {
-    background: #cfcfcf;
-}
-
 #resume-progress {
     position: absolute;
     z-index: 1;
@@ -231,12 +227,12 @@ h4, .job-title {
 
 .job-desc {
     padding-left: 2.5rem;
+    align-self: flex-start;
 }
 
 .flex-job-container {
     display:-webkit-flex;
     display: flex;
-    justify-content: center;
     text-align: left;
     margin: auto;
     align-items: center;
@@ -368,17 +364,18 @@ h4, .job-title {
 }
 
 /* Hover Caption */
-.hover-wrapper a {
-    color: #888;
-    text-decoration: none;
-}
-
 .hover-wrapper {
     display: inline-block;
     margin: 0;
     text-align: left;
     position: relative;
     width: 100%;
+    padding: 0 0.5em 0 0.5em;
+}
+
+.hover-wrapper a {
+    color: #888;
+    text-decoration: none;
 }
 
 .hover-wrapper figure {
@@ -738,7 +735,8 @@ figure {
 }
 
 #resume-container {
-    height: calc(1.285 * (60vw - 4rem));
+    height: calc(1.285 * (60vw - 4rem)); /* todo: change this so that it doesnt get too big on big screens */
+    background: #cfcfcf;
     position: relative;
 }
 
@@ -773,6 +771,10 @@ figure {
         flex-direction: column;
     }
 
+    .thanks-container {
+        align-self: center;
+    }
+
     .thanks-title {
         padding-top: 2.5rem !important;
     }
@@ -802,6 +804,13 @@ figure {
     .flex-job-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .job-title {
+        text-align: center;
+    }
+
+    .job-year {
         text-align: center;
     }
 
@@ -1046,6 +1055,22 @@ figure {
 
 .ml-3 {
     margin-left: 3rem;
+}
+
+.mt-3_5 {
+    margin-top: 3.5rem;
+}
+
+.mb-3_5 {
+    margin-bottom: 3.5rem;
+}
+
+.mr-3_5 {
+    margin-right: 3.5rem;
+}
+
+.ml-3_5 {
+    margin-left: 3.5rem;
 }
 
 .mt-4 {

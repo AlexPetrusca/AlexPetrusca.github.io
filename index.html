@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Alex's Webpage</title>
+    <!--Fovicon Metadata-->
+    <link rel="apple-touch-icon" sizes="180x180" href="rsc/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="rsc/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="rsc/favicon/favicon-16x16.png">
+    <link rel="manifest" href="rsc/favicon/site.webmanifest">
+    <link rel="mask-icon" href="rsc/favicon/safari-pinned-tab.svg" color="#00a300">
+    <link rel="shortcut icon" href="rsc/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Petrusca">
+    <meta name="application-name" content="Petrusca">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="msapplication-config" content="rsc/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#3fcd3f">
+    <!--Open Graph (OG) Metadata-->
     <meta property="og:url" content="https://alexpetrusca.github.io/">
     <meta property="og:title" content="Alex Petrusca">
     <meta property="og:type" content="website">
@@ -10,8 +24,9 @@
         scratch and learning new things to get my projects off the ground.">
     <meta property="og:image" content="https://alexpetrusca.github.io/rsc/hero-new.jpg">
     <meta property="og:author" content="Alexandru Petrusca">
-    <title>Alex's Webpage</title>
+    <!--CSS and Font Loading-->
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900"/>
+    <!--todo remove unneccessary font weights from above link to improve loading performance-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -123,12 +138,12 @@
         <div id="experience" class="scrollspy responsive">
             <div class="center-align">
                 <h2 class="mt-0 pt-4 mb-2">Experience</h2>
-                <div class="mb-2i row">
+                <div class="mb-3_5 row">
                     <div class="flex-job-container">
                         <img class="job-icon" src="rsc/paxata2.png" style="height: 15.5rem; width: 15.5rem;">
                         <div class="job-desc">
                             <h4 class="job-title">Software Engineer Intern at Paxata</h4>
-                            <span class="job-year">2018 | REDWOOD CITY, CA</span><br>
+                            <div class="job-year">2018 | REDWOOD CITY, CA</div>
                             <ul class="mb-0i">
                                 <li class="job-bullet">
                                     Worked on master to improve consistency of main application & enforce expected behavior through bug fixes
@@ -143,12 +158,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="mb-2i row">
-                    <div class="flex-job-container flex-reverse">
+                <div class="mb-3_5 row">
+                    <div class="flex-job-container">
                         <img class="job-icon" src="rsc/gesher.png" style="height: 15.5rem; width: 15.5rem;">
-                        <div class="job-desc pl-0 pr-2_5">
+                        <div class="job-desc">
                             <h4 class="job-title">Software Developer at Gesher Labs</h4>
-                            <span class="job-year">2018 | REDWOOD CITY, CA</span><br>
+                            <div class="job-year">2018 | REDWOOD CITY, CA</div>
                             <ul class="mb-0i">
                                 <li class="job-bullet">
                                     Build internal tools for the 50+ Gesher members to use
@@ -163,12 +178,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="mb-0i row">
+                <div class="mb-0 row">
                     <div class="flex-job-container">
                         <img class="job-icon" src="rsc/paxata.png" style="height: 15.5rem; width: 15.5rem;">
                         <div class="job-desc">
                             <h4 class="job-title">Full-Stack Software Engineer Intern at Paxata</h4>
-                            <span class="job-year">2017 | REDWOOD CITY, CA</span><br>
+                            <div class="job-year">2017 | REDWOOD CITY, CA</div>
                             <ul class="mb-0i">
                                 <li class="job-bullet">
                                     Used Agile to develop a landing page that expedites common workflows and minimizes data inconsistencies
@@ -346,7 +361,7 @@
                         </figure>
                     </div>
                     <h5>Connect Four Engine</h5>
-                    <p>AI</p>
+                    <p>Artificial Intelligence</p>
                 </div>
                 <div class="Portfolio-box grid-item ai">
                     <div class="hover-wrapper">
@@ -375,7 +390,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <h5>Java Breakout Game</h5>
+                    <h5>JavaFX Breakout Game</h5>
                     <p>Graphics</p>
                 </div>
                 <div class="Portfolio-box grid-item misc">
@@ -405,7 +420,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <h5>OpenGL Model Loader</h5>
+                    <h5>WebGL Model Drawer</h5>
                     <p>Graphics</p>
                 </div>
             </div>
@@ -437,7 +452,7 @@
         <!--ABOUT ME-->
         <div class="about-me pt-5 pb-5">
             <div id="aboutMeContainer" class="flex-row responsive">
-                <img id="meJPG" class="mr-3 job-icon" src="rsc/me.jpg" style="max-width: 450px">
+                <img id="meJPG" class="mr-4 job-icon" src="rsc/me.jpg" style="max-width: 450px">
                 <div class="thanks-container align-center">
                     <div class="thanks-title mb-1_5 mt-0">ABOUT ME</div>
                     <div class="thanks-desc raleway">

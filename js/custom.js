@@ -1,3 +1,5 @@
+// custom listeners and inits
+
 jQuery(document).ready(function ($) {
     let topNav = document.getElementById("top-nav");
     let navHome = document.getElementById("nav-home");

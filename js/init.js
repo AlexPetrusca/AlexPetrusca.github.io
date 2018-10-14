@@ -1,3 +1,5 @@
+// library inits
+
 jQuery(document).ready(function ($) {
     if(jQuery.browser.mobile) {
         // if mobile, turn off parallax
@@ -23,7 +25,6 @@ jQuery(document).ready(function ($) {
         $('.portfolioFilter a').click(function () {
             $('.portfolioFilter .current').removeClass('current');
             $(this).addClass('current');
-
             const selector = $(this).attr('data-filter');
             $container.isotope({
                 filter: selector
