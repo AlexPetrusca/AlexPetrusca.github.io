@@ -723,6 +723,15 @@ figure {
     width: 29px;
 }
 
+/* Resume Loading */
+.progress {
+    background-color: hsl(80, 74%, 80%);
+}
+
+.progress .indeterminate {
+    background-color: hsl(80, 74%, 40%);
+}
+
 /* Responsiveness */
 .responsive {
     width: 65%;
