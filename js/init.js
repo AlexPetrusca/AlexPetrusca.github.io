@@ -1,6 +1,12 @@
 // library inits
 
 jQuery(document).ready(function ($) {
+    // materialize init
+    $('.sidenav').sidenav();
+    $('.scrollspy').scrollSpy({throttle: -100, scrollOffset: 80.5});
+    $('.collapsible').collapsible();
+
+    // parallax init
     if(jQuery.browser.mobile) {
         // if mobile, turn off parallax
         $('.parallax img').css("opacity", 1)
@@ -8,10 +14,17 @@ jQuery(document).ready(function ($) {
         // if desktop, turn on parallax
         $('.parallax').parallax();
     }
-    // materialize init
-    $('.sidenav').sidenav();
-    $('.scrollspy').scrollSpy({throttle: -100, scrollOffset: 80.5});
-    $('.collapsible').collapsible();
+
+    // typewriter init
+    new TypeIt('#typer', {
+        strings: [ "Artificial Intelligence.", "Machine Learning.", "Distributed Systems.", "Web Development." ],
+        speed: 50,
+        breakLines: false,
+        autoStart: false,
+        loop: true,
+        nextStringDelay: 2500
+    });
+
     $(window).on("load", function () {
         // isotope portfolio init
         const $container = $('.portfolio');
@@ -31,14 +44,17 @@ jQuery(document).ready(function ($) {
             });
             return false;
         });
-        // typewriter init
-        new TypeIt('#typer', {
-            strings: [ "Artificial Intelligence.", "Machine Learning.", "Distributed Systems.", "Web Development." ],
-            speed: 50,
-            breakLines: false,
-            autoStart: false,
-            loop: true,
-            nextStringDelay: 2500
-        });
+
+        // wow.js init
+        const wow = new WOW(
+            {
+                boxClass:     'wow',
+                animateClass: 'animated',
+                offset:       -10,
+                mobile:       true,
+                live:         false
+            }
+        );
+        wow.init();
     });
 });

@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900"/>
     <!--todo remove unneccessary font weights from above link to improve loading performance-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/materialize.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -99,7 +100,7 @@
                 <h2 class="mt-0 pt-4 mb-2">Skills</h2>
                 <h6 class="mb-4 center-9">My relevant computer programming skills. High ratings correspond to "very
                     comfortable with" and low ratings correspond to "not very comfortable with."</h6>
-                <div id="skillsRow">
+                <div id="skill-progresses">
                     <div class="flex-row skill">
                         <div class="flex-row">
                             <div id="progressJava" class="progress-semi"></div>
@@ -142,9 +143,9 @@
                 <div class="mb-3_5 row">
                     <div class="flex-job-container">
                         <a href="https://www.paxata.com/">
-                            <img class="job-icon" src="rsc/paxata2.png" style="height: 15.5rem; width: 15.5rem;">
+                            <img class="job-icon wow fadeInLeft" src="rsc/paxata2.png" style="height: 15.5rem; width: 15.5rem;">
                         </a>
-                        <div class="job-desc">
+                        <div class="job-desc wow fadeInRight">
                             <h4 class="job-title">Software Engineer Intern at Paxata</h4>
                             <div class="job-year">2018 | REDWOOD CITY, CA</div>
                             <ul class="mb-0i">
@@ -164,9 +165,9 @@
                 <div class="mb-3_5 row">
                     <div class="flex-job-container">
                         <a href="http://www.geshergroup.org/team.html">
-                            <img class="job-icon" src="rsc/gesher.png" style="height: 15.5rem; width: 15.5rem;">
+                            <img class="job-icon wow fadeInLeft" src="rsc/gesher.png" style="height: 15.5rem; width: 15.5rem;">
                         </a>
-                        <div class="job-desc">
+                        <div class="job-desc wow fadeInRight">
                             <h4 class="job-title">Software Developer at Gesher Labs</h4>
                             <div class="job-year">2018 | REDWOOD CITY, CA</div>
                             <ul class="mb-0i">
@@ -186,9 +187,9 @@
                 <div class="mb-0 row">
                     <div class="flex-job-container">
                         <a href="https://www.paxata.com/">
-                            <img class="job-icon" src="rsc/paxata.png" style="height: 15.5rem; width: 15.5rem;">
+                            <img class="job-icon wow fadeInLeft" src="rsc/paxata.png" style="height: 15.5rem; width: 15.5rem;">
                         </a>
-                        <div class="job-desc">
+                        <div class="job-desc wow fadeInRight">
                             <h4 class="job-title">Full-Stack Software Engineer Intern at Paxata</h4>
                             <div class="job-year">2017 | REDWOOD CITY, CA</div>
                             <ul class="mb-0i">
@@ -217,9 +218,9 @@
             <div class="center-align">
                 <h2 class="mt-0 pt-4 mb-2">Education</h2>
                 <div class="mb-1 flex-row">
-                    <img class="job-icon-side mr-3" src="rsc/education/sharp2.jpg" style="height:200px">
+                    <img class="wow fadeInLeft job-icon-side mr-3" src="rsc/education/sharp2.jpg" style="height:200px">
                     <img class="job-icon" src="rsc/education/uc-logo.png" style="height:300px">
-                    <img class="job-icon-side ml-3" src="rsc/education/sharp.jpg" style="height:200px">
+                    <img class="wow fadeInRight job-icon-side ml-3" src="rsc/education/sharp.jpg" style="height:200px">
                 </div>
                 <h5 class="kern mt-2" style="color:black; font-weight:700;">UNIVERSITY OF CALIFORNIA, SANTA CRUZ</h5>
                 <div>
@@ -241,8 +242,8 @@
                     <hr>
                     <div class="mb-2_5"></div>
 
-                    <h4 class="subheading mt-2 mb-2 pt-0">Relevant Coursework</h4>
-                    <ul class="collapsible left-align mb-0i">
+                    <h4 class="wow fadeInUp subheading mt-2 mb-2 pt-0">Relevant Coursework</h4>
+                    <ul class="wow fadeInUp collapsible left-align mb-0i">
                         <li>
                             <div class="collapsible-header pl-2i">
                                 <i class="small material-icons number-label">looks_one</i>
@@ -459,8 +460,8 @@
         <!--ABOUT ME-->
         <div class="about-me pt-5 pb-5">
             <div id="aboutMeContainer" class="flex-row responsive">
-                <img id="meJPG" class="mr-4 job-icon" src="rsc/me.jpg" style="max-width: 450px">
-                <div class="thanks-container align-center">
+                <img id="meJPG" class="wow fadeInLeft mr-4 job-icon" src="rsc/me.jpg" style="max-width: 450px">
+                <div class="wow fadeInRight thanks-container align-center">
                     <div class="thanks-title mb-1_5 mt-0">ABOUT ME</div>
                     <div class="thanks-desc raleway">
                         I am an aspiring software engineer looking to specialize in artificial intelligence and machine
@@ -510,6 +511,7 @@
 <!--LIBRARY SCRIPT LOADING-->
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/isotope.min.js"></script>
 <script type="text/javascript" src="js/progressbar.min.js"></script>
 <script type="text/javascript" src="js/typeit.min.js"></script>
