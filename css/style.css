@@ -27,10 +27,6 @@ p {
     margin-bottom: 0;
 }
 
-h6 {
-    line-height: unset !important;
-}
-
 h1, h2 {
     font-family: "Raleway", sans-serif;
     color: #e55b2f;
@@ -39,6 +35,10 @@ h1, h2 {
 h5 {
     font-family: "Raleway", sans-serif;
     color: #f87e57;
+}
+
+h6 {
+    line-height: unset !important;
 }
 
 nav {

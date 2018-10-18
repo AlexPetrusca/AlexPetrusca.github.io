@@ -46,15 +46,13 @@ jQuery(document).ready(function ($) {
         });
 
         // wow.js init
-        const wow = new WOW(
-            {
-                boxClass:     'wow',
-                animateClass: 'animated',
-                offset:       -10,
-                mobile:       true,
-                live:         false
-            }
-        );
+        const wow = new WOW({
+            boxClass:     'wow',
+            animateClass: 'animated',
+            offset:       -10,
+            mobile:       true,
+            live:         false
+        });
         wow.init();
     });
 });
