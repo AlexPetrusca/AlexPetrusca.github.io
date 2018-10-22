@@ -1,5 +1,7 @@
 // library inits
 
+let typeIt;
+
 jQuery(document).ready(function ($) {
     // materialize init
     $('.sidenav').sidenav();
@@ -16,7 +18,7 @@ jQuery(document).ready(function ($) {
     }
 
     // typewriter init
-    new TypeIt('#typer', {
+    typeIt = new TypeIt('#typer', {
         strings: [ "Artificial Intelligence.", "Machine Learning.", "Distributed Systems.", "Web Development." ],
         speed: 50,
         breakLines: false,

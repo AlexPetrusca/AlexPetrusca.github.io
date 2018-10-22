@@ -61,9 +61,10 @@ addProgress('#progressC', ['C', 'rgb(92, 193, 176)', 'rgba(92, 193, 176, 0.2)'],
 /*
  * LISTENERS
  */
-window.onscroll = function () {
-    let scrollTop = window.scrollY;
-    let scrollBot = scrollTop + window.innerHeight;
+document.onscroll = function () {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const scrollBot = scrollTop + windowHeight;
     if (scrollTop > 10) {
         topNav.classList.remove("nav-transparent");
         topNav.classList.add("nav-solid");
@@ -78,8 +79,16 @@ window.onscroll = function () {
             row_activated = true;
         }
     }
+
+    if (typeIt) {
+        if(!typeIt.isFrozen && scrollTop >= windowHeight) {
+            typeIt.freeze()
+        } else if (typeIt.isFrozen && scrollTop < windowHeight) {
+            typeIt.unfreeze()
+        }
+    }
 };
-window.onscroll(null);
+document.onscroll(null);
 
 // Resume Frame Loading
 resumeFrame.onload = function () {
