@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
     $('.sidenav').sidenav();
     $('.scrollspy').scrollSpy({throttle: -100, scrollOffset: 80.5});
     $('.collapsible').collapsible();
+    $('.modal').modal();
 
     // parallax init
     if(jQuery.browser.mobile) {
@@ -46,6 +47,8 @@ jQuery(document).ready(function ($) {
             });
             return false;
         });
+
+        document.getElementById('connect4-video').playbackRate = 0.5;
 
         // wow.js init
         new WOW().init();

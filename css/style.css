@@ -283,6 +283,144 @@ h4, .job-title {
     display: block;
 }
 
+/* Modal */
+.btn-flat {
+    border-radius: 4px;
+}
+
+.modal {
+    overflow: visible;
+    outline: 0;
+    background: transparent;
+    min-width: 625px;
+    height: 630px;
+    max-height: 80%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.gradient-blue {
+    background: linear-gradient(to right, #296ffa , #5cc1b0);
+}
+
+.gradient-green {
+    background: linear-gradient(to right, #619259 , #86c154);
+}
+
+.gradient-orange {
+     background: linear-gradient(to right, #de815b , #e6a345);
+}
+
+.gradient-pink {
+    background: linear-gradient(to right, #c57862 , #86709f);
+}
+
+.gradient-purple {
+    background: linear-gradient(to right, #343f5b , #766a91);
+}
+
+.gradient-lightblue {
+    background: linear-gradient(to right, #69aebd, #2a7cf5);
+}
+
+.modal-interior {
+    height: 630px;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+    box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    background: white;
+    padding-right: 9px;
+    padding-left: 9px;
+    border-radius: 50%;
+    margin: -8px;
+}
+
+.modal-close:hover {
+    background: #ff6666;
+    color: white;
+}
+
+.modal-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.modal-bottom {
+    object-position: bottom;
+}
+
+.modal-content {
+    height: 350px;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+.modal-middle {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.modal-middle span {
+    line-height: normal;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left !important;
+    padding: 1.5rem 3rem !important;
+    height: 220px !important;
+}
+
+.modal-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-button {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    background: white;
+    color: dimgray;
+    font-weight: 500;
+}
+
+.github-button:hover {
+    background: #a4df2c;
+    color: white;
+}
+
+.play-button {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    background: white;
+    color: dimgray;
+    margin-right: 0.5rem;
+    font-weight: 500;
+}
+
+.play-button:hover {
+    background: #a4df2c;
+    color: white;
+}
+
 /* Parallax */
 .parallax-container {
     height: 425px !important;
@@ -441,7 +579,7 @@ h4, .job-title {
 .hover-wrapper figcaption h5 {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: white;
 }
 
 .hover-wrapper figcaption a {
@@ -451,12 +589,13 @@ h4, .job-title {
     display: inline-block;
     background: white;
     color: dimgray;
+    font-weight: 500;
     margin-right: 0.5rem;
 }
 
 .hover-wrapper figcaption a:hover {
     background: #a4df2c;
-    color: #fff;
+    color: white;
 }
 
 /* Portfolio */
@@ -468,31 +607,37 @@ figure {
 #atari-figure {
     background: url("../rsc/portfolio/bg/bg1.svg");
     background-size: cover;
+    width: inherit;
 }
 
 #checkers-figure {
     background: url("../rsc/portfolio/bg/bg2.svg");
     background-size: cover;
+    width: inherit;
 }
 
 #connect4-figure {
     background: url("../rsc/portfolio/bg/bg3.svg");
     background-size: cover;
+    width: inherit;
 }
 
 #cube-figure {
     background: url("../rsc/portfolio/bg/bg4.svg");
     background-size: cover;
+    width: inherit;
 }
 
 #neural-figure {
     background: url("../rsc/portfolio/bg/bg5.svg");
     background-size: cover;
+    width: inherit;
 }
 
 #virus-figure {
     background: url("../rsc/portfolio/bg/bg6.svg");
     background-size: cover;
+    width: inherit;
 }
 
 #atari-figure figcaption {
@@ -588,12 +733,12 @@ figure {
 
 .Portfolio-nav li a:hover {
     background: #a4df2c;
-    color: #fff;
+    color: white;
 }
 
 .Portfolio-nav li a.current {
     background: #a4df2c;
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
@@ -951,6 +1096,20 @@ figure {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+}
+
+/* Width Height Inherit */
+.inherit-wh {
+    width: inherit;
+    height: inherit;
+}
+
+.inherit-w {
+    width: inherit;
+}
+
+.inherit-h {
+    height: inherit;
 }
 
 /* Margins */
@@ -1453,4 +1612,46 @@ figure {
 
 .align-left {
     text-align: left;
+}
+
+/* Full-Width */
+.full-width {
+    width: 100%;
+}
+
+/* Font Weight */
+.fw-1 {
+    font-weight: 100;
+}
+
+.fw-2 {
+    font-weight: 200;
+}
+
+.fw-3 {
+    font-weight: 300;
+}
+
+.fw-4 {
+    font-weight: 400;
+}
+
+.fw-5 {
+    font-weight: 500;
+}
+
+.fw-6 {
+    font-weight: 600;
+}
+
+.fw-7 {
+    font-weight: 700;
+}
+
+.fw-8 {
+    font-weight: 800;
+}
+
+.fw-9 {
+    font-weight: 900;
 }

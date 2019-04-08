@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Air Tunnel Aerodynamics - Final Proposal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+<div class="container">
+    <div class="row">
+        <div id="main" class="section col s19 m10 offset-m1 xl9 offset-xl1">
+            <h2>Air Tunnel Aerodynamics</h2>
+            <h3 id="name">by Alexandru Petrusca</h3>
+
+            <div id="description" class="section scrollspy">
+                <h3>High-Level Description</h3>
+                <p>
+                    This project will focus on simulating the operations of a wind tunnel and developing different
+                    techniques to visualize the air flow within the tunnel as it interacts with obstacle objects. The
+                    project is composed of 2 main parts: the simulation and the visualization. For the simulation, the
+                    Navier-Stokes equations will be used to model the air flow through the tunnel. Objects inside the
+                    tunnel and the wind-tunnel walls themselves will act as obstacles for the flow. In interactions with
+                    the flow, obstacle objects will obey the no-slip and adiabatic wall conditions. The visualization will
+                    primarily involve heat maps to visualize wind velocity, pressure, lift, and drag and color-coded
+                    streamlines of fixed length to visualize wind velocity in 3D.
+                </p>
+                <img src="flow3.jpg">
+            </div>
+
+            <div id="simulation" class="section scrollspy">
+                <h3>The Simulation</h3>
+                <p>
+                    This component of my final project comprises of implementing an accurate simulation of 3d fluid dynamics
+                    which accounts for turbulent flows and objects as obstacles in the flow. To accomplish this, I will have
+                    to use the Navier-Stokes equations to model the air flow inside the tunnel. The direct numerical
+                    solution of the Navier-Stokes equations for turbulent flow is extremely difficult however. To get
+                    anywhere close to a real-time simulation with turbulence, it is necessary to employ the
+                    Reynolds-averaged Navier–Stokes equations (RANS), supplemented with a turbulence model to close the RANS
+                    equations for solving. For my turbulence model, I will be using the k–omega turbulence model since
+                    it is the most widely used, particularly for industrial computations. To solve the RANS equations and
+                    acquire a description of the air flow inside the tunnel, I will be using the OpenFOAM library with C++.
+                    Objects in the tunnel will obey the no-slip and adiabatic wall conditions. Once I have the data from my
+                    simulations, I can begin visualizing it with a host of techniques.
+                </p>
+            </div>
+
+            <div id="visualization" class="section scrollspy">
+                <h3>The Visualization</h3>
+                <p>
+                    To begin visualizing the data, I will have to implement a graphical user interface to display objects
+                    and air flows inside the tunnel. To do this, I will use the Qt framework for C++ with OpenGL
+                    integration. I am interested in implementing three methods to visualize the air flows inside the wind
+                    tunnel. First, I am looking to use streamlines of constant length to represent air flow. In this method,
+                    streamlines will spawn in intervals from a wind source. The path that they take will represent the
+                    direction of the flow through time. The color of segments on each individual streamline will represent
+                    the magnitude of the wind velocity at those segments. To avoid visual cluttering, the streamlines will
+                    be seeded in real-time. Note that changing the length of these streamlines will result in significantly
+                    different visualizations. Second, I want to use heat maps to represent air flow. In this method,
+                    “hotter” regions will denote high wind velocity whereas “colder” regions will denote low wind velocity.
+                    Given the impracticality of a 3D heat map, this sort of visualization will only be possible from a
+                    lateral or bird’s eye view of a 3D model. Third, I want to use a heat map on the surface of the model to
+                    visualize air pressure, drag, and lift on different regions of the model. These values can be extracted
+                    from the Navier–Stokes equations using additional equations and relations.
+                </p>
+                <img src="flow1.jpg">
+                <img src="flow2.jpg">
+            </div>
+
+            <div id="goals" class="section scrollspy">
+                <h3>Goals</h3>
+                <ul id="list-goals">
+                    <li>
+                        3d fluid dynamics via Reynolds-averaged Navier–Stokes equations with k–omega turbulence model
+                    </li>
+                    <li>
+                        Objects in wind tunnel interact and deflect wind around them according to the no-slip and adiabatic wall conditions
+                    </li>
+                    <li>
+                        Color-coded streamline visualization of wind velocity across streamline path (real-time streamlines of constant length with seeding
+                    </li>
+                    <li>
+                        Top view and side view heat map of wind velocity
+                    </li>
+                    <li>
+                        Heat map on top of model to visualize regions of pressure, drag, and lift
+                    </li>
+                    <li>
+                        GUI to switch between different views of the visualization as well as load models and save screenshots of the visualization
+                    </li>
+                </ul>
+            </div>
+
+            <div id="timeline" class="section scrollspy"></div>
+            <h3>Timeline</h3>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Due Date</th>
+                    <th>Objective</th>
+                </tr>
+                <tr class>
+                    <td>Feb. 1</td>
+                    <td class="indigoText">Project Proposal</td>
+                </tr>
+                <tr>
+                    <td>Feb. 5</td>
+                    <td>Get RANS equations working with OpenFoam and use ParaView to visualize the resulting flow</td>
+                </tr>
+                <tr>
+                    <td>Feb. 10</td>
+                    <td>
+                        Implement a working 2D wind tunnel simulation with no-slip, adiabatic walls and simple white
+                        streamlines to visualize air flow (using my own GUI)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Feb. 15</td>
+                    <td>Implement a simple 2D object (circle) that interacts with the air flow inside the tunnel</td>
+                </tr>
+                <tr>
+                    <td>Feb. 20</td>
+                    <td>
+                        Implement seeded streamlines of constant length to represent the air flow. Color code segments
+                        of each streamline to indicate the velocity of the flow.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Week of Feb. 25</td>
+                    <td class="indigoText">In-class presentation on project work-in-progress.</td>
+                </tr>
+                <tr>
+                    <td>Mar. 5</td>
+                    <td>Convert 2D visualization to a 3D flow visualization with streamlines and a 3D model.</td>
+                </tr>
+                <tr>
+                    <td>Mar. 8</td>
+                    <td>Implement a way to import 3D models and save a screenshot of visualizations</td>
+                </tr>
+                <tr>
+                    <td>Mar. 14</td>
+                    <td>
+                        Implement a heat map on the model’s surface to visualize pressure, drag, and lift.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mar. 19</td>
+                    <td>
+                        Implement a 3D camera system which the user can interact with. Implement a top view and side
+                        view heat map with accompanying GUI buttons.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mar. 20</td>
+                    <td class="indigoText">Final project presentation/demo</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div id="references" class="section scrollspy">
+                <h3>References</h3>
+                <ul>
+                    <li>
+                        <a href="https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19880008200.pdf">
+                            Navier-Stokes Simulation of Wind-Tunnel Flow Using LU-AD1 Factorization Algorithm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pdfs.semanticscholar.org/9a08/2d5909e3709c2f38b4db8389d8d9040e8ba8.pdf">
+                            Fluid Flow Visualization
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.researchgate.net/file.PostFileLoader.html?id=53898c5fd039b1bd3a8b45c0&assetKey=AS%3A273543839846420%401442229341759">
+                            Closure Models for Incompressible Turbulent Flows
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">
+                            Navier-Stokes Equations - Wikipedia
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="sidebar" class="col hide-on-small-only m1 xl2 offset-xl1">
+            <div class="toc-wrapper pinned" style="top: 0;">
+                <div style="height: 1px;">
+                    <ul class="table-of-contents">
+                        <li><a href="#description">High-Level Description</a></li>
+                        <li><a href="#simulation">The Simulation</a></li>
+                        <li><a href="#visualization">The Visualization</a></li>
+                        <li><a href="#goals">Goals</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#references">References</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

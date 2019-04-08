@@ -1,5 +1,4 @@
 // custom listeners and inits
-
 let topNav = document.getElementById("top-nav");
 let navHome = document.getElementById("nav-home");
 let homeButton = document.getElementById("home-button");
@@ -11,6 +10,7 @@ let awardHeader = document.getElementById("award-header");
 let awardDropdown = document.getElementById("award-dropdown");
 let skills = document.getElementById("skill-progresses");
 let row_activated = false;
+let is_mobile_display = false;
 
 // PROGRESS SKILLS
 let progresses = [];
@@ -129,3 +129,58 @@ awardHeader.onclick = function () {
 navHome.onclick = function () {
     homeButton.click();
 };
+
+// Resizing Window Listener
+window.onresize = function () {
+    const windowWidth = window.innerWidth;
+    if((is_mobile_display && windowWidth >= 750) || (!is_mobile_display && windowWidth < 750)) {
+        let figures = [];
+        figures.push(document.getElementById('checkers-figure'));
+        figures.push(document.getElementById('connect4-figure'));
+        figures.push(document.getElementById('neural-figure'));
+        figures.push(document.getElementById('atari-figure'));
+        figures.push(document.getElementById('virus-figure'));
+        figures.push(document.getElementById('cube-figure'));
+
+        let modalIds = [];
+        modalIds.push('checkers-modal');
+        modalIds.push('connect4-modal');
+        modalIds.push('neural-modal');
+        modalIds.push('atari-modal');
+        modalIds.push('virus-modal');
+        modalIds.push('cube-modal');
+
+        let links = [];
+        links.push("CheckersJS");
+        links.push("game-ais");
+        links.push("machine-learning");
+        links.push("java-games");
+        links.push("assembly-virus");
+        links.push("WebGL-Draw");
+
+        for (let i = 0; i < figures.length; i++) {
+            let anchor1 = figures[i].children[0];
+            let anchor2 = figures[i].children[1].children[1];
+            if (windowWidth < 750) {
+                let modal = M.Modal.getInstance(document.getElementById(modalIds[i]));
+                if (modal) {
+                    modal.close();
+                }
+
+                let link = "https://github.com/AlexPetrusca/" + links[i];
+                anchor1.href = link;
+                anchor2.href = link;
+
+                anchor1.classList.remove("modal-trigger");
+                anchor2.classList.remove("modal-trigger");
+            } else {
+                anchor1.href = "#" + modalIds[i];
+                anchor2.href = "#" + modalIds[i];
+
+                anchor1.classList.add("modal-trigger");
+                anchor2.classList.add("modal-trigger");
+            }
+        }
+    }
+};
+window.onresize(null);
