@@ -173,12 +173,16 @@ window.onresize = function () {
 
                 anchor1.classList.remove("modal-trigger");
                 anchor2.classList.remove("modal-trigger");
+
+                is_mobile_display = true
             } else {
                 anchor1.href = "#" + modalIds[i];
                 anchor2.href = "#" + modalIds[i];
 
                 anchor1.classList.add("modal-trigger");
                 anchor2.classList.add("modal-trigger");
+
+                is_mobile_display = false;
             }
         }
     }
