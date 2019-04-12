@@ -292,8 +292,8 @@ h4, .job-title {
     overflow: visible;
     outline: 0;
     background: transparent;
-    min-width: 625px;
-    height: 630px;
+    min-width: 650px;
+    height: 650px;
     max-height: 80%;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -324,7 +324,7 @@ h4, .job-title {
 }
 
 .modal-interior {
-    height: 630px;
+    height: 650px;
     border-radius: 10px;
     overflow: hidden;
     -webkit-box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
@@ -381,7 +381,7 @@ h4, .job-title {
     align-items: center;
     text-align: left !important;
     padding: 1.5rem 3rem !important;
-    height: 220px !important;
+    height: 240px !important;
 }
 
 .modal-image-container {

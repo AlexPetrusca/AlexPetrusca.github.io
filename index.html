@@ -472,7 +472,7 @@
                     <span>
                         This application implements the Negamax algorithm with alpha-beta pruning and iterative deepening,
                         achieving up to a 14-ply depth search. It uses a transposition table to reduce the search space
-                        of its search tree and an efficient 10x10 "mailbox" board representation to speed up search times.
+                        of its search tree and an efficient 10 x 10 "mailbox" board representation to speed up search times.
                         It also uses quiescence search to avoid the so called "horizon effect". Its heuristic evaluation
                         function accounts for piece value, piece position, and win conditions.
                     </span>
@@ -495,7 +495,7 @@
                     <h4 class="full-width mb-1 fw-7">Connect Four Engine</h4>
                     <span>
                         This application implements the Minimax algorithm with alpha-beta pruning, achieving up to a
-                        8-ply depth search in a reasonable timespan. It uses an immutable 6x7 "mailbox" board
+                        8-ply depth search in a reasonable timespan. It uses an immutable 6 x 7 "mailbox" board
                         representation for programming convenience. Its heuristic evaluation function values moves that
                         lead to future 3-in-a-row and 4-in-a-row combinations.
                     </span>
@@ -561,12 +561,11 @@
                     <h4 class="full-width mb-1 fw-7">x86 Assembly Virus</h4>
                     <span>
                         This is a harmless computer virus that infects x86 PE (portable executable) files on Windows
-                        operating systems. It is programmed entirely in NASM x86 assembly. It uses a directory-crawling
-                        algorithm that looks up the directory tree from the virus's current location to find and infect
-                        other executable files on the host's file system. To infect an executable file, the virus appends
-                        itself to the end of the file and modifies the file's PE header, changing the entry-point to point
-                        to the start of the appended virus code and altering various header fields (file size,
-                        PE checksum, etc.) to avoid detection by simple anti-virus checks.
+                        operating systems. It uses a directory-crawling algorithm to find and infect other .exe files
+                        on the host's file system. The virus works by first appending itself to the end of a .exe file.
+                        From there, it manipulates the file's PE header, changing the entry-point of the program to point
+                        to the start of the appended virus code. It then alters various PE header fields to avoid detection
+                        by simple anti-virus scans.
                     </span>
                 </div>
             </div>
