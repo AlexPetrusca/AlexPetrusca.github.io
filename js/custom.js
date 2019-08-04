@@ -68,7 +68,7 @@ addProgress('progressC', ['C', 'rgb(92, 193, 176)', 'rgba(92, 193, 176, 0.2)'], 
 /*
  * LISTENERS
  */
-window.onscroll = function () {
+function scroll() {
     const scrollTop = window.scrollY;
     const windowHeight = window.innerHeight;
     const scrollBot = scrollTop + windowHeight;
@@ -98,8 +98,29 @@ window.onscroll = function () {
             typeIt.unfreeze()
         }
     }
-};
-window.onscroll(null);
+}
+
+const raf = window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    window.oRequestAnimationFrame;
+const $window = $(window);
+let lastScrollTop = $window.scrollTop();
+
+function loop() {
+    const scrollTop = $window.scrollTop();
+    if (lastScrollTop === scrollTop) {
+        raf(loop);
+        return;
+    } else {
+        lastScrollTop = scrollTop;
+        scroll();
+        raf(loop);
+    }
+}
+
+loop();
 
 // Resume Frame Loading
 resumeFrame.onload = function () {
@@ -129,7 +150,7 @@ if (jQuery.browser.mobile) {
 // Award Frame Loading
 awardHeader.onclick = function () {
     if (awardDropdown.style.width === "100%") {
-        awardDropdown.style.width = "230px";
+        awardDropdown.style.width = "250px";
         awardDropdown.style.background = "";
     } else {
         awardDropdown.style.width = "100%";
