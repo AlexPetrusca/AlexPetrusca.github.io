@@ -918,6 +918,8 @@ figure {
 
     #meJPG {
         width: 100%;
+        max-width: 450px;
+        max-height: 341px;
         margin-right: 0;
     }
 

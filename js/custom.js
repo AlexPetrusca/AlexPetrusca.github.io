@@ -39,8 +39,8 @@ function getProgressOptions(name, color, trailColor) {
     }
 }
 
-function addProgress(id, options, duration) {
-    progresses.push([new ProgressBar.Circle(id, getProgressOptions(...options)), duration]);
+function addProgress(id, options, percent) {
+    progresses.push([new ProgressBar.Circle(id, getProgressOptions(...options)), percent]);
 }
 
 function activateProgresses() {
@@ -61,16 +61,20 @@ addProgress('#progressC', ['C', 'rgb(92, 193, 176)', 'rgba(92, 193, 176, 0.2)'],
 /*
  * LISTENERS
  */
-document.onscroll = function () {
+window.onscroll = function () {
     const scrollTop = window.scrollY;
     const windowHeight = window.innerHeight;
     const scrollBot = scrollTop + windowHeight;
     if (scrollTop > 10) {
-        topNav.classList.remove("nav-transparent");
-        topNav.classList.add("nav-solid");
+        if (!topNav.classList["nav-solid"]) {
+            topNav.classList.remove("nav-transparent");
+            topNav.classList.add("nav-solid");
+        }
     } else {
-        topNav.classList.remove("nav-solid");
-        topNav.classList.add("nav-transparent");
+        if (!topNav.classList["nav-transparent"]) {
+            topNav.classList.remove("nav-solid");
+            topNav.classList.add("nav-transparent");
+        }
     }
 
     if (!row_activated) {
@@ -88,7 +92,7 @@ document.onscroll = function () {
         }
     }
 };
-document.onscroll(null);
+window.onscroll(null);
 
 // Resume Frame Loading
 resumeFrame.onload = function () {
