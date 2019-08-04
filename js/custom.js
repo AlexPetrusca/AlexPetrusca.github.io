@@ -40,23 +40,30 @@ function getProgressOptions(name, color, trailColor) {
 }
 
 function addProgress(id, options, percent) {
-    progresses.push([new ProgressBar.Circle(id, getProgressOptions(...options)), percent]);
+    new ProgressBar.Circle(`#${id}`, getProgressOptions(...options));
+    const progress = document.getElementById(id);
+    const progressHighlight = progress.children[0].children[1];
+    progresses.push({
+        elem: progressHighlight,
+        percent: percent
+    });
 }
 
 function activateProgresses() {
     for (const progress of progresses) {
-        progress[0].animate(progress[1]);
+        progress.elem.style.transition = 'stroke-dashoffset ease-in-out 750ms';
+        progress.elem.style.strokeDashoffset = `${(1 - progress.percent) * 251.363}`;
     }
 }
 
-addProgress('#progressJava', ['Java', 'rgb(4, 83, 170)', 'rgba(4, 83, 170, 0.2)'], 0.925);
-addProgress('#progressJavascript', ['JS', 'rgb(207, 92, 56)', 'rgba(207, 92, 56, 0.2)'], 0.9);
-addProgress('#progressHTML', ['HTML', 'rgb(239, 162, 50)', 'rgba(239, 162, 50, 0.2)'], 0.9);
-addProgress('#progressCSS', ['CSS', 'rgb(136, 109, 155)', 'rgba(136, 109, 155, 0.2)'], 0.9);
-addProgress('#progressPython', ['Python', 'rgb(75, 152, 90)', 'rgba(75, 152, 90, 0.2)'], 0.85);
-addProgress('#progressScala', ['Scala', 'rgb(164, 222, 44)', 'rgba(164, 222, 44, 0.2)'], 0.65);
-addProgress('#progressCplusplus', ['C++', 'rgb(113, 128, 205)', 'rgba(113, 128, 205, 0.2)'], 0.55);
-addProgress('#progressC', ['C', 'rgb(92, 193, 176)', 'rgba(92, 193, 176, 0.2)'], 0.5);
+addProgress('progressJava', ['Java', 'rgb(4, 83, 170)', 'rgba(4, 83, 170, 0.2)'], 0.925);
+addProgress('progressJavascript', ['JS', 'rgb(207, 92, 56)', 'rgba(207, 92, 56, 0.2)'], 0.9);
+addProgress('progressHTML', ['HTML', 'rgb(239, 162, 50)', 'rgba(239, 162, 50, 0.2)'], 0.9);
+addProgress('progressCSS', ['CSS', 'rgb(136, 109, 155)', 'rgba(136, 109, 155, 0.2)'], 0.9);
+addProgress('progressPython', ['Python', 'rgb(75, 152, 90)', 'rgba(75, 152, 90, 0.2)'], 0.85);
+addProgress('progressScala', ['Scala', 'rgb(164, 222, 44)', 'rgba(164, 222, 44, 0.2)'], 0.65);
+addProgress('progressCplusplus', ['C++', 'rgb(113, 128, 205)', 'rgba(113, 128, 205, 0.2)'], 0.55);
+addProgress('progressC', ['C', 'rgb(92, 193, 176)', 'rgba(92, 193, 176, 0.2)'], 0.5);
 
 /*
  * LISTENERS
