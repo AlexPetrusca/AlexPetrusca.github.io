@@ -120,6 +120,7 @@ function loop() {
     }
 }
 
+scroll();
 loop();
 
 // Resume Frame Loading
