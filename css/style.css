@@ -1057,6 +1057,15 @@ figure {
     }
 }
 
+/* Proportional Scaling Image */
+.scale-img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
 /* Ease */
 .ease-1 {
     -webkit-transition: all 0.1s ease-in-out;

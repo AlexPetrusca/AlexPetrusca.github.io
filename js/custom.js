@@ -11,6 +11,7 @@ let awardDropdown = document.getElementById("award-dropdown");
 let skills = document.getElementById("skill-progresses");
 let row_activated = false;
 let is_mobile_display = false;
+let resumeLink = "https://drive.google.com/file/d/1nJ-eKfXepBUdWuw6RNYpw4jVj5tJvMnu/preview?rm=minimal";
 
 // PROGRESS SKILLS
 let progresses = [];
@@ -105,19 +106,14 @@ const raf = window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
     window.msRequestAnimationFrame ||
     window.oRequestAnimationFrame;
-const $window = $(window);
-let lastScrollTop = $window.scrollTop();
-
+let lastScrollTop = window.scrollY;
 function loop() {
-    const scrollTop = $window.scrollTop();
-    if (lastScrollTop === scrollTop) {
-        raf(loop);
-        return;
-    } else {
+    const scrollTop = window.scrollY;
+    if (lastScrollTop !== scrollTop) {
         lastScrollTop = scrollTop;
         scroll();
-        raf(loop);
     }
+    raf(loop);
 }
 
 scroll();
@@ -131,7 +127,7 @@ resumeFrame.onload = function () {
 if (jQuery.browser.mobile) {
     resumeHeader.classList.remove("collapsible-header");
     resumeHeader.onclick = function () {
-        window.location.href = "https://drive.google.com/file/d/1TwbRPB5kwk0cImEVROLfXprZDnHN9ryr/preview?rm=minimal";
+        window.location.href = resumeLink;
     };
 } else {
     resumeHeader.onclick = function () {
@@ -140,7 +136,7 @@ if (jQuery.browser.mobile) {
             resumeDropdown.style.width = "260px";
             resumeDropdown.style.background = "";
         } else {
-            resumeFrame.setAttribute("src", "https://drive.google.com/file/d/1TwbRPB5kwk0cImEVROLfXprZDnHN9ryr/preview?rm=minimal");
+            resumeFrame.setAttribute("src", resumeLink);
             resumeProgress.style.display = "block";
             resumeDropdown.style.width = "100%";
             resumeDropdown.style.background = "#f87e57";
@@ -151,7 +147,7 @@ if (jQuery.browser.mobile) {
 // Award Frame Loading
 awardHeader.onclick = function () {
     if (awardDropdown.style.width === "100%") {
-        awardDropdown.style.width = "250px";
+        awardDropdown.style.width = "251px";
         awardDropdown.style.background = "";
     } else {
         awardDropdown.style.width = "100%";
