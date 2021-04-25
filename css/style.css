@@ -889,7 +889,8 @@ figure {
 }
 
 #resume-container {
-    height: calc(1.285 * (60vw - 4rem)); /* todo: change this so that it doesnt get too big on big screens */
+    height: calc(1.285 * (60vw - 4rem));
+    max-height: 1060px;
     background: #cfcfcf;
     position: relative;
 }
