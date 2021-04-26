@@ -503,6 +503,7 @@ h4, .job-title {
 
 /* Hover Caption */
 .hover-wrapper {
+    background: white;
     display: inline-block;
     margin: 0;
     text-align: left;
