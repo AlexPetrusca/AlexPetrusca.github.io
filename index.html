@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://alexpetrusca.github.io/">
     <meta property="og:title" content="Alex Petrusca's Website">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Hi, I am a computer science student at UCSC. I like building passion projects
+    <meta property="og:description" content="Hi, I am a software engineer specializing in backend/full-stack work. I like building passion projects
         from scratch and learning new things to get my projects off the ground.">
     <meta property="og:image:width" content="1415">
     <meta property="og:image:height" content="741">
@@ -426,9 +426,9 @@
                     </ul>
                 </div>
             </div>
-            <!-- Checkers -->
             <div class="portfolio ease-2">
                 <div class="grid-sizer"></div>
+                <!-- Checkers -->
                 <div class="Portfolio-box grid-item ai">
                     <div class="hover-wrapper">
                         <figure id="checkers-figure">
@@ -539,11 +539,7 @@
             </div>
             <div class="pb-2"></div>
         </div>
-        <div class="parallax-container">
-            <div class="parallax lighten"><img src="rsc/parallax/ucsc1-min.jpg" style="transform: translate3d(-50%, 375px, 0px);"></div>
-        </div>
-
-        <div>
+        <div id="project-modals">
             <!-- Checkers -->
             <div id="checkers-modal" class="modal">
                 <div class="modal-interior">
@@ -669,32 +665,37 @@
             </div>
             <!-- cylinder drawer -->
             <div id="cube-modal" class="modal">
-            <div class="modal-interior">
-                <a href="#!" class="modal-close waves-effect waves-light btn-flat"><i class="material-icons">close</i></a>
-                <div class="modal-content">
-                    <video id="cube-video" autoplay muted loop class="modal-video">
-                        <source src="rsc/portfolio/modal/cube.mov" type="video/mp4">
-                    </video>
-                </div>
-                <div class="modal-middle gradient-lightblue">
-                    <span class="white-text raleway">Cylindrical spline drawer written using WebGL</span>
-                    <div>
-                        <a href="drawer.html" class="play-button waves-effect wavexs-light raleway">Try Now</a>
-                        <a href="https://github.com/AlexPetrusca/WebGL-Draw" class="github-button waves-effect waves-light raleway">View on GitHub</a>
+                <div class="modal-interior">
+                    <a href="#!" class="modal-close waves-effect waves-light btn-flat"><i class="material-icons">close</i></a>
+                    <div class="modal-content">
+                        <video id="cube-video" autoplay muted loop class="modal-video">
+                            <source src="rsc/portfolio/modal/cube.mov" type="video/mp4">
+                        </video>
                     </div>
-                </div>
-                <div class="modal-footer raleway">
-                    <h4 class="full-width mb-1 fw-7">WebGL Model Drawer</h4>
-                    <span>
+                    <div class="modal-middle gradient-lightblue">
+                        <span class="white-text raleway">Cylindrical spline drawer written using WebGL</span>
+                        <div>
+                            <a href="drawer.html" class="play-button waves-effect wavexs-light raleway">Try Now</a>
+                            <a href="https://github.com/AlexPetrusca/WebGL-Draw" class="github-button waves-effect waves-light raleway">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer raleway">
+                        <h4 class="full-width mb-1 fw-7">WebGL Model Drawer</h4>
+                        <span>
                         This is a WebGL application to draw and render cylindrical splines in browser. It features an
                         interface to filter between different shading techniques, including Gouraud, Phong, depth, rim,
                         and cel (toon) shading. It also allows users to alter the ambient and diffuse light colors as
                         well as the specular constant for the scene. The application implements alpha selection to allow
                         users to interact with objects in the scene and move them around using the mouse.
                     </span>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="parallax-container">
+            <div class="parallax lighten">
+                <img src="rsc/parallax/ucsc1-min.jpg" style="transform: translate3d(-50%, 375px, 0px);">
+            </div>
         </div>
 
         <!--RESUME-->
@@ -723,7 +724,7 @@
                 <div class="wow fadeInRight thanks-container align-center">
                     <div class="thanks-title mb-1_5 mt-0">ABOUT ME</div>
                     <div class="thanks-desc raleway">
-                        I am a software engineer looking to specialize in backend/full-stack work. I like building passion
+                        I am a software engineer specializing in backend/full-stack work. I like building passion
                         projects from scratch and learning new things to get my projects off the ground. Over five+ years
                         of programming, I have picked up experience working with Java, Scala, JavaScript, Python and C/C++
                         on projects ranging from video games and music visualizers to deep neural networks and distributed
