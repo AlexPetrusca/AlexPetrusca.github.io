@@ -92,7 +92,7 @@ function scroll() {
         }
     }
 
-    if (typeIt) {
+    if (typeIt && typeIt.hasStarted) {
         if(!typeIt.isFrozen && scrollTop >= windowHeight) {
             typeIt.freeze()
         } else if (typeIt.isFrozen && scrollTop < windowHeight) {
