@@ -11,3 +11,4 @@ function loadFile(file_name, load_handle) {
     request.open('GET', file_name, true);
     request.send();
 }
+

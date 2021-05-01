@@ -1,4 +1,15 @@
-<!doctypehtml><html lang="en"><meta charset="UTF-8"><meta name="viewport"content="width=400"><title>Wind Tunnel</title><link rel="stylesheet"type="text/css"href="js/tunnel/tunnel.min.css"><script id="obstacle_render_fragment"type="x-shader/x-fragment">precision highp float;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=400">
+
+    <title>Wind Tunnel</title>
+
+    <link rel="stylesheet" type="text/css" href="js/tunnel/tunnel.min.css">
+
+    <script id="obstacle_render_fragment" type="x-shader/x-fragment">
+        precision highp float;
 
         void main() {
             vec2 coords = gl_FragCoord.xy;
@@ -15,7 +26,11 @@
             } else {
                 gl_FragColor = vec4(1, 1, 1, 1);
             }
-        }</script><script id="obstacle_velocity_fragment"type="x-shader/x-fragment">precision highp float;
+        }
+    </script>
+
+    <script id="obstacle_velocity_fragment" type="x-shader/x-fragment">
+        precision highp float;
 
         uniform sampler2D u_velocity;
         uniform sampler2D u_obstacle;
@@ -31,7 +46,11 @@
             } else {
                 gl_FragColor = texture2D(u_velocity, coords / u_textureSize);
             }
-        }</script><script id="obstacle_pressure_fragment"type="x-shader/x-fragment">precision highp float;
+        }
+    </script>
+
+    <script id="obstacle_pressure_fragment" type="x-shader/x-fragment">
+        precision highp float;
 
         uniform sampler2D u_pressure;
         uniform sampler2D u_obstacle;
@@ -47,7 +66,11 @@
 //            } else {
                 gl_FragColor = texture2D(u_pressure, coords / u_textureSize);
 //            }
-        }</script><script id="jacobi_diffusion_fragment"type="x-shader/x-fragment">precision mediump float;
+        }
+    </script>
+
+    <script id="jacobi_diffusion_fragment" type="x-shader/x-fragment">
+        precision mediump float;
 
         uniform sampler2D u_divergence;
         uniform sampler2D u_pressure;
@@ -68,7 +91,11 @@
             vec2 bCurr = texture2D(u_divergence, coords / u_textureSize).xy;
             vec2 xNew = 0.25 * (xUp + xDown + xRight + xLeft - bCurr);
             gl_FragColor = vec4(xNew, 0, 0);
-        }</script><script id="divergence_fragment"type="x-shader/x-fragment">precision mediump float;
+        }
+    </script>
+
+    <script id="divergence_fragment" type="x-shader/x-fragment">
+        precision mediump float;
 
         uniform sampler2D u_velocity;
         uniform vec2 u_textureSize;
@@ -87,7 +114,11 @@
 
             float divergence = 0.5 * ((wRight.x - wLeft.x) + (wUp.y - wDown.y));
             gl_FragColor = vec4(divergence, 0, 0, 0);
-        }</script><script id="gradient_subtraction_fragment"type="x-shader/x-fragment">precision mediump float;
+        }
+    </script>
+
+    <script id="gradient_subtraction_fragment" type="x-shader/x-fragment">
+        precision mediump float;
 
         uniform sampler2D u_velocity;
         uniform sampler2D u_pressure;
@@ -107,7 +138,11 @@
 
             vec2 currVelocity = texture2D(u_velocity, coords / u_textureSize).xy;
             gl_FragColor = vec4(currVelocity - 0.5 * vec2(pRight - pLeft, pUp - pDown), 0, 0);
-        }</script><script id="advect_velocity_fragment"type="x-shader/x-fragment">precision mediump float;
+        }
+    </script>
+
+    <script id="advect_velocity_fragment" type="x-shader/x-fragment">
+        precision mediump float;
 
         uniform sampler2D u_velocity;
         uniform vec2 u_textureSize;
@@ -141,7 +176,11 @@
                 vec2 velocity = bilerp(pos, u_velocity, u_textureSize);
                 gl_FragColor = vec4(velocity, 0, 0);
             }
-        }</script><script id="advect_material_fragment"type="x-shader/x-fragment">precision highp float;
+        }
+    </script>
+
+    <script id="advect_material_fragment" type="x-shader/x-fragment">
+        precision highp float;
 
         uniform sampler2D u_velocity;
         uniform sampler2D u_material;
@@ -202,7 +241,11 @@
                 posMat.y = mod(posMat.y, u_screenSize.y - 1.0);
                 gl_FragColor = vec4(bilerp(posMat, u_material, u_screenSize), 0, 0);
             }
-        }</script><script id="render_fragment"type="x-shader/x-fragment">precision mediump float;
+        }
+    </script>
+
+    <script id="render_fragment" type="x-shader/x-fragment">
+        precision mediump float;
 
         uniform sampler2D u_material;
         uniform sampler2D u_obstacle;
@@ -289,12 +332,57 @@
                 float wind_speed = length(wind_velocity);
                 gl_FragColor = vec4(transfer(wind_speed), 1);
             }
-        }</script><script id="reset_velocity_fragment"type="x-shader/x-fragment">precision mediump float;
+        }
+    </script>
+
+    <script id="reset_velocity_fragment" type="x-shader/x-fragment">
+        precision mediump float;
 
         void main() {
             gl_FragColor = vec4(0.5, 0.0, 0.0, 0.0);
-        }</script><script id="vertex"type="x-shader/x-vertex">attribute vec2 a_position;
+        }
+    </script>
+
+    <script id="vertex" type="x-shader/x-vertex">
+        attribute vec2 a_position;
 
         void main() {
            gl_Position = vec4(a_position.x, a_position.y, 0, 1);
-        }</script><script src="js/tunnel/GlBoilerplate.min.js"></script><script src="js/tunnel/util.min.js"></script><script src="js/tunnel/tunnel.min.js"></script><canvas id="myCanvas"width="1500px"height="750px"></canvas><br><button id="material"onclick="materialView()">Material View</button> <button id="velocity"onclick="velocityView()">Velocity View</button> <button id="pressure"onclick="pressureView()">Pressure View</button> <button id="reset"onclick="resetWindow()">Reset</button> <label for="object-select">Select Object:</label> <select id="object-select"><option value="circle.jpg"selected="selected">Circle<option value="square.jpg">Square<option value="octagon.jpg">Octagon<option value="teardrop.jpg">Tear Drop<option value="wing.jpg">Wing 1<option value="wing2.jpg">Wing 2<option value="wing3.jpg">Wing 3<option value="car.jpg">Standard Car<option value="van.jpg">Mini-Van Car<option value="oldcar.jpg">Retro Car<option value="airplane.jpg">Airplane<option value="jet.jpg">Jet Fighter<option value="dancer.jpg">Dancer<option value="evolution.jpg">Evolution<option value="hills.jpg">Hills<option value="heads.jpg">Movie Heads</select>
+        }
+    </script>
+
+    <script type="text/javascript" src="js/tunnel/GlBoilerplate.min.js"></script>
+    <script type="text/javascript" src="js/tunnel/util.min.js"></script>
+    <script type="text/javascript" src="js/tunnel/tunnel.min.js"></script>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1500px" height="750px"></canvas>
+<br>
+<button id="material" onclick="materialView()">Material View</button>
+<button id="velocity" onclick="velocityView()">Velocity View</button>
+<button id="pressure" onclick="pressureView()">Pressure View</button>
+<button id="reset" onclick="resetWindow()">Reset</button>
+
+<label for="object-select">Select Object: </label>
+<select id="object-select">
+    <option value="circle.jpg" selected>Circle</option>
+    <option value="square.jpg">Square</option>
+    <option value="octagon.jpg">Octagon</option>
+    <option value="teardrop.jpg">Tear Drop</option>
+    <option value="wing.jpg">Wing 1</option>
+    <option value="wing2.jpg">Wing 2</option>
+    <option value="wing3.jpg">Wing 3</option>
+    <option value="car.jpg">Standard Car</option>
+    <option value="van.jpg">Mini-Van Car</option>
+    <option value="oldcar.jpg">Retro Car</option>
+    <option value="airplane.jpg">Airplane</option>
+    <option value="jet.jpg">Jet Fighter</option>
+    <option value="dancer.jpg">Dancer</option>
+    <option value="evolution.jpg">Evolution</option>
+    <option value="hills.jpg">Hills</option>
+    <option value="heads.jpg">Movie Heads</option>
+</select>
+
+</body>
+</html>

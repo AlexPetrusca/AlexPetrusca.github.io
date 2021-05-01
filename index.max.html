@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Alex's Webpage</title>
+    <!--Fovicon Metadata-->
+    <link rel="apple-touch-icon" sizes="180x180" href="rsc/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="rsc/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="rsc/favicon/favicon-16x16.png">
+    <link rel="manifest" href="rsc/favicon/site.webmanifest">
+    <link rel="mask-icon" href="rsc/favicon/safari-pinned-tab.svg" color="#00a300">
+    <link rel="shortcut icon" href="rsc/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Petrusca">
+    <meta name="application-name" content="Petrusca">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="msapplication-config" content="rsc/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#3fcd3f">
+    <!--Open Graph (OG) Metadata-->
+    <meta property="og:url" content="https://alexpetrusca.github.io/">
+    <meta property="og:title" content="Alex Petrusca's Website">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Hi, I am a software engineer specializing in backend/full-stack work. I like building passion projects
+        from scratch and learning new things to get my projects off the ground.">
+    <meta property="og:image:width" content="1415">
+    <meta property="og:image:height" content="741">
+    <meta property="og:image" content="rsc/og/og-image.jpg">
+    <!--CSS and Font Loading-->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900"/>
+    <!--todo remove unneccessary font weights from above link to improve loading performance-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/materialize.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="siteWrapper" style="overflow: hidden;">
+    <main>
+        <!--NAVBAR-->
+        <div class="navbar-fixed">
+            <nav id="top-nav" class="ease-2 nav-transparent">
+                <div class="nav-wrapper">
+                    <a id="nav-home" href="#" class="ease-2 logo">
+                        <svg id="logo" class="ml-0_5 mr-1" style="height: 52px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.5 72">
+                            <g>
+                                <line class="cls-1" x1="16.01" y1="18" x2="23.14" y2="28.62"></line>
+                                <line class="cls-1" x1="33.57" y1="42.59" x2="40.7" y2="53.21"></line>
+                                <line class="cls-1" x1="23.38" y1="42.59" x2="16.25" y2="53.21"></line>
+                                <circle class="cls-2" cx="11.21" cy="10.72" r="8.72"></circle>
+                                <circle class="cls-2" cx="29.38" cy="34.71" r="8.72"></circle>
+                                <circle class="cls-2" cx="45.77" cy="60.75" r="8.72"></circle>
+                                <circle class="cls-2" cx="10.72" cy="61.28" r="8.72"></circle>
+                            </g>
+                        </svg>
+                        <div class="kern">Alex<br/>Petrusca</div>
+                    </a>
+                    <a id="mobileToggle" href="#" data-target="nav-mobile" class="ease-2 sidenav-trigger">
+                        <i id="mobileToggleIcon" class="large material-icons">menu</i>
+                    </a>
+                    <ul id="nav-desktop" class="ease-2-transform table-of-contents">
+                        <li><a class="desktopAnchor" id="home-button" href="#home">Home</a></li>
+                        <li><a class="desktopAnchor" id="skills-button" href="#skills">Skills</a></li>
+                        <li><a class="desktopAnchor" href="#experience">Experience</a></li>
+                        <li><a class="desktopAnchor" href="#education">Education</a></li>
+                        <li><a class="desktopAnchor" href="#projects">Projects</a></li>
+                        <li><a class="desktopAnchor" href="#resume">Resume</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <ul id="nav-mobile" class="sidenav raleway table-of-contents">
+            <li><a class="mobileAnchor" href="#home">Home</a></li>
+            <li><a class="mobileAnchor" href="#skills">Skills</a></li>
+            <li><a class="mobileAnchor" href="#experience">Experience</a></li>
+            <li><a class="mobileAnchor" href="#education">Education</a></li>
+            <li><a class="mobileAnchor" href="#projects">Projects</a></li>
+            <li><a class="mobileAnchor" href="#resume">Resume</a></li>
+        </ul>
+
+        <!--HOME-->
+        <div id="home" class="scrollspy hero">
+            <div class="hero parallax-container" style="height: 100vh!important;">
+                <div class="parallax"><img class="hero-img" src="rsc/hero-new.jpg"></div>
+                <!--<div class="parallax"><img src="rsc/ucsc/hero-min.jpg"></div>-->
+            </div>
+            <div class="hero-container container ease-2">
+                <div class="hero-title-container">
+                    <div class="hero-title">Hi, my name is Alex Petrusca</div>
+                    <div class="hero-subtitle-1">And I like coding.</div>
+                    <div class="hero-subtitle-2">I am passionate about</div>
+                    <div class="hero-subtitle-3">
+                        <span id="typer"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--SKILLS-->
+        <div id="skills" class="scrollspy responsive">
+            <div class="center-align raleway">
+                <h2 class="mt-0 pt-4 mb-2">Skills</h2>
+                <h6 class="mb-4 center-9">My relevant computer programming skills. High ratings correspond to "very
+                    comfortable with" and low ratings correspond to "not very comfortable with."</h6>
+                <div id="skill-progresses">
+                    <div class="flex-row skill">
+                        <div class="flex-row">
+                            <div id="progressJava" class="progress-semi"></div>
+                            <div id="progressJavascript" class="progress-semi"></div>
+                        </div>
+                        <div class="flex-row">
+                            <div id="progressHTML" class="progress-semi"></div>
+                            <div id="progressCSS" class="progress-semi"></div>
+                        </div>
+                    </div>
+                    <div class="flex-row skill">
+                        <div class="flex-row">
+                            <div id="progressPython" class="progress-semi"></div>
+                            <div id="progressScala" class="progress-semi"></div>
+
+                        </div>
+                        <div class="flex-row">
+                            <div id="progressCplusplus" class="progress-semi"></div>
+                            <div id="progressC" class="progress-semi"></div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="mt-0 pt-0 subheading">Other</h4>
+                <span>
+                    Experience with x86 Assembly (NASM), NumPy, Git, Apache Maven, LaTeX and Unix/Linux.<br>
+                    Java experience includes backend development and testing with Spring, JUnit, and Selenium.<br>
+                    JavaScript experience includes frontend development with AngularJS, JQuery, and CoffeeScript.
+                </span>
+                <div class="pb-5"></div>
+            </div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax lighten"><img src="rsc/parallax/ucsc7-min.jpg" style="transform: translate3d(-50%, 325px, 0px);"></div>
+        </div>
+
+        <!--EXPERIENCE-->
+        <div id="experience" class="scrollspy responsive">
+            <div class="center-align">
+                <h2 class="mt-0 pt-4 mb-2">Experience</h2>
+                <!-- Datavisor 2 -->
+                <div class="mb-3_5 row">
+                    <div class="flex-job-container">
+                        <a href="https://www.datavisor.com/">
+                            <img class="job-icon wow fadeInLeft" src="rsc/experience/datavisor.svg" style="height: 15.5rem; width: 15.5rem;">
+                        </a>
+                        <div class="job-desc wow fadeInRight">
+                            <h4 class="job-title">Full-Stack Software Engineer at DataVisor</h4>
+                            <div class="job-year">2019 - Present | MOUNTAIN VIEW, CA</div>
+                            <ul class="mb-0i">
+                                <li class="job-bullet">
+                                    Built tools that allow customers to monitor, analyze, and take action against fraudulent activity in real time using Angular, React, and Node.js
+                                </li>
+                                <li class="job-bullet">
+                                    Created interactive heat maps, graphs, and dashboards to visualize fraud using D3.js
+                                </li>
+                                <li class="job-bullet">
+                                    Led the technical design and development of an integration testing framework based on Selenium that was used by the UI and QA team to write 200+ test cases
+                                </li>
+                                <li class="job-bullet">
+                                    Implemented a framework in Java to query Prometheus and generate snapshots of Grafana dashboards on-demand for secure external display to customers
+                                </li>
+                                <li class="job-bullet">
+                                    Maintained build script, Dockerfile, and Helm config for frontend Node.js server
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Datavisor 1 -->
+                <div class="mb-3_5 row">
+                    <div class="flex-job-container">
+                        <a href="https://www.datavisor.com/">
+                            <img class="job-icon wow fadeInLeft" src="rsc/experience/datavisor.svg" style="height: 15.5rem; width: 15.5rem;">
+                        </a>
+                        <div class="job-desc wow fadeInRight">
+                            <h4 class="job-title">Full-Stack Software Engineer Intern at DataVisor</h4>
+                            <div class="job-year">2019 | MOUNTAIN VIEW, CA</div>
+                            <ul class="mb-0i">
+                                <li class="job-bullet">
+                                    Developed an internal dashboard to manage UI releases to client environments
+                                </li>
+                                <li class="job-bullet">
+                                    Ported 10+ internal administrative webpages from AngularJS to Angular 8
+                                </li>
+                                <li class="job-bullet">
+                                    Automated the deployment of UI services using Bash, Groovy, Docker, and Jenkins
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- UCSC NLP -->
+                <div class="mb-3_5 row">
+                    <div class="flex-job-container">
+                        <a href="https://www.soe.ucsc.edu/">
+                            <img class="job-icon wow fadeInLeft" src="rsc/experience/ucsc.svg" style="height: 15.5rem; width: 15.5rem;">
+                        </a>
+                        <div class="job-desc wow fadeInRight">
+                            <h4 class="job-title">NLP Undergraduate Researcher at UCSC</h4>
+                            <div class="job-year">2019 | SANTA CRUZ, CA</div>
+                            <ul class="mb-0i">
+                                <li class="job-bullet">
+                                    Implemented a baseline LSTM sequence-to-sequence model with attention mechanism for neural story generation using Pytorch (Test Perplexity: 20.97)
+                                </li>
+                                <li class="job-bullet">
+                                    Wrote evaluation metrics in Python to gauge inter- and intra-story repetition
+                                </li>
+                                <li class="job-bullet">
+                                    Worked with PhD researcher to help write, peer-review, and submit research paper
+                                </li>
+                                <li class="job-bullet">
+                                    Paper accepted to AACL 2020 and INLG 2020 (<a href="https://arxiv.org/abs/2010.09935">Paper Link</a>)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paxata 2 -->
+                <div class="mb-3_5 row">
+                    <div class="flex-job-container">
+                        <a href="https://www.paxata.com/">
+                            <img class="job-icon wow fadeInLeft" src="rsc/experience/paxata.svg" style="height: 15.5rem; width: 15.5rem;">
+                        </a>
+                        <div class="job-desc wow fadeInRight">
+                            <h4 class="job-title">Software Engineer Intern at Paxata</h4>
+                            <div class="job-year">2018 | REDWOOD CITY, CA</div>
+                            <ul class="mb-0i">
+                                <li class="job-bullet">
+                                    Enforced expected behavior through 20+ bug fixes and 10+ integration tests
+                                </li>
+                                <li class="job-bullet">
+                                    Fixed a widespread performance issue related to lack of parity between frontend and backend object representations
+                                </li>
+                                <li class="job-bullet">
+                                    Fixed a performance issue with dataset version loading related to multiple unnecessary server calls from the frontend
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gesher -->
+                <div class="mb-3_5 row">
+                    <div class="flex-job-container">
+                        <a href="https://www.geshergroup.org/">
+                            <img class="job-icon wow fadeInLeft" src="rsc/experience/gesher.svg" style="height: 15.5rem; width: 15.5rem;">
+                        </a>
+                        <div class="job-desc wow fadeInRight">
+                            <h4 class="job-title">Software Developer at Gesher Labs</h4>
+                            <div class="job-year">2018 | REDWOOD CITY, CA</div>
+                            <ul class="mb-0i">
+                                <li class="job-bullet">
+                                    Build internal tools for the 50+ Gesher Group members to use
+                                </li>
+                                <li class="job-bullet">
+                                    Built a Slack bot to help facilitate interviews between new and veteran members of Gesher
+                                </li>
+                                <li class="job-bullet">
+                                    Developed a web-scraping application for UCSC cafeterias and presented it to the members of Gesher
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paxata 1 -->
+                <div class="mb-0 row">
+                    <div class="flex-job-container">
+                        <a href="https://www.paxata.com/">
+                            <img class="job-icon wow fadeInLeft" src="rsc/experience/paxata.svg" style="height: 15.5rem; width: 15.5rem;">
+                        </a>
+                        <div class="job-desc wow fadeInRight">
+                            <h4 class="job-title">Full-Stack Software Engineer Intern at Paxata</h4>
+                            <div class="job-year">2017 | REDWOOD CITY, CA</div>
+                            <ul class="mb-0i">
+                                <li class="job-bullet">
+                                    Developed a landing page to expedite common workflows using Agile methodology
+                                </li>
+                                <li class="job-bullet">
+                                    Designed Scala APIs and AngularJS interfaces that query MongoDB for metadata on prioritized projects (NoSQL)
+                                </li>
+                                <li class="job-bullet">
+                                    Wrote JUnit tests and Selenium integration tests for the new landing page
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pb-5"></div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax lighten"><img src="rsc/parallax/ucsc6-min.jpg" style="transform: translate3d(-50%, 500px, 0px);"></div>
+        </div>
+
+        <!--EDUCATION-->
+        <div id="education" class="scrollspy responsive">
+            <div class="center-align">
+                <h2 class="mt-0 pt-4 mb-2">Education</h2>
+
+                <!-- UCSC -->
+                <div class="mb-1 flex-row">
+                    <img class="wow fadeInLeft job-icon-side mr-3" src="rsc/education/sharp2.jpg" style="height:200px">
+                    <img class="job-icon" src="rsc/education/uc-logo.png" style="height:300px">
+                    <img class="wow fadeInRight job-icon-side ml-3" src="rsc/education/sharp.jpg" style="height:200px">
+                </div>
+                <h5 class="kern mt-2" style="color:black; font-weight:700;">UNIVERSITY OF CALIFORNIA, SANTA CRUZ</h5>
+                <div>
+                    <h5 class="mb-2 mt-0_5 raleway">Computer Science B.S., 2016 - 2019</h5>
+                    <ul id="award-dropdown" class="collapsible center-align button-dropdown ease-2" style="width: 251px">
+                        <li>
+                            <div id="award-header" class="collapsible-header dropdown-header" tabindex="0">7x Dean's Honors</div>
+                            <div class="collapsible-body deans-body">
+                                <div class="center-div deans-desc">
+                                    <img class="scale-img mb-1" src="rsc/education/trophy.svg" style="height: 140px">
+                                    <div>Received over 3 years for "outstanding academic achievement" </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="pb-2_5"></div>
+                    <hr>
+                    <div class="mb-2_5"></div>
+
+                    <!-- Relevant Coursework -->
+                    <h4 class="wow fadeInUp subheading mt-2 mb-2 pt-0">Relevant Coursework</h4>
+                    <ul class="wow fadeInUp collapsible left-align mb-0i">
+                        <li>
+                            <div class="collapsible-header pl-2i">
+                                <i class="small material-icons number-label">looks_one</i>
+                                CMPS 128: Distributed Computing
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    Available, fault-tolerant distributed key-value store that provides causal and eventual consistency with sharding and replication.
+                                    <br>
+
+                                    <br><br>
+                                    <b>Topics:</b> Distributed communication, naming, synchronization, consistency and replication,
+                                    fault tolerance, security, parallelism and scaleup, and peer-to-peer systems.
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header pl-2i">
+                                <i class="small material-icons number-label">looks_two</i>
+                                CMPS 109: Advanced Programming
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    Distributed parallel password cracker for UNIX salted passphrases.
+                                    <br>
+                                    Reliable distributed parallel MSD Radix sorter.
+                                    <br>
+                                    Configurable test harness for geometric bounds checking.
+                                    <br><br>
+                                    <b>Topics:</b> Multithreading, distributed computing, TCP, UDP, Berkeley socket communication,
+                                    and object-oriented design.
+                                    Focus on C++.
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header pl-2i">
+                                <i class="small material-icons number-label">looks_3</i>
+                                CMPS 142: Machine Learning and Data Mining
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    <b>Topics:</b> Classification learning, density estimation and Bayesian learning regression, online
+                                    learning, neural networks, decision trees, boosting, and nearest neighbor techniques.
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header pl-2i">
+                                <i class="small material-icons number-label">looks_4</i>
+                                CMPS 102: Introduction to Analysis of Algorithms
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    <b>Topics:</b> Divide-and-conquer, greedy algorithms, dynamic programming, min-cut max-flow, Big-O
+                                    runtime analysis, algorithmic proof of correctness, and LaTeX.
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header pl-2i">
+                                <i class="small material-icons number-label">looks_5</i>
+                                CMPS 104A: Fundamentals of Compiler Design
+                            </div>
+                            <div class="collapsible-body">
+                                <span>
+                                    Fully working compiler with Preprocessor (CPP), Lexer (Flex), Parser (Bison), symbol
+                                    table and type checker, and intermediate code generator.
+                                    <br><br>
+                                    <b>Topics:</b> Compiler structure, symbol tables, regular expressions and languages, finite automata,
+                                    lexical analysis, context-free languages, LL(1), recursive descent, LALR(1), and LR(1)
+                                    parsing; and attribute grammars as a model of syntax-directed translation.
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pb-5"></div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax lighten"><img src="rsc/parallax/ucsc10.jpg" style="transform: translate3d(-50%, 160px, 0px);"></div>
+        </div>
+
+        <!--PROJECTS-->
+        <div id="projects" class="scrollspy responsive">
+            <div class="center-align">
+                <h2 class="mt-0 pt-4 mb-2">Projects</h2>
+<!--                <div style="color:red">This section is not kept updated.</div>-->
+                <div class="portfolioFilter">
+                    <ul class="Portfolio-nav">
+                        <li><a href="#" data-filter="*" class="current waves-effect waves-light raleway" id="all">All</a></li>
+                        <li><a href="#" data-filter=".ai" class="waves-effect waves-light raleway">AI</a></li>
+                        <li><a href="#" data-filter=".graphics" class="waves-effect waves-light raleway">Graphics</a></li>
+                        <li><a href="#" data-filter=".misc" class="waves-effect waves-light raleway">Misc</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="portfolio ease-2">
+                <div class="grid-sizer"></div>
+                <!-- Checkers -->
+                <div class="Portfolio-box grid-item ai">
+                    <div class="hover-wrapper">
+                        <figure id="checkers-figure">
+                            <a href="#checkers-modal" class="modal-trigger inherit-wh">
+                                <div class="modal-image-container inherit-wh">
+                                    <img class="portfolio-img" src="rsc/portfolio/icon/checkers.svg" alt="checkers_img">
+                                </div>
+                            </a>
+                            <figcaption>
+                                <span class="tag">JavaScript</span>
+                                <a href="#checkers-modal" class="waves-effect waves-light raleway modal-trigger">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>Checkers Engine</h5>
+                    <p>Artificial Intelligence</p>
+                </div>
+                <!-- Connect Four -->
+                <div class="Portfolio-box grid-item ai">
+                    <div class="hover-wrapper">
+                        <figure id="connect4-figure">
+                            <a href="#connect4-modal" class="modal-trigger inherit-wh">
+                                <div class="modal-image-container inherit-wh">
+                                    <img class="portfolio-img" src="rsc/portfolio/icon/connect4.svg" alt="Connect4_img">
+                                </div>
+                            </a>
+                            <figcaption>
+                                <span class="tag">Java</span>
+                                <a href="#connect4-modal" class="waves-effect waves-light raleway modal-trigger">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>Connect Four Engine</h5>
+                    <p>Artificial Intelligence</p>
+                </div>
+                <!-- MNIST Classifier -->
+                <div class="Portfolio-box grid-item ai">
+                    <div class="hover-wrapper">
+                        <figure id="neural-figure">
+                            <a href="#neural-modal" class="modal-trigger inherit-wh">
+                                <div class="modal-image-container inherit-wh">
+                                    <img class="portfolio-img" src="rsc/portfolio/icon/neural.svg" alt="neural_img">
+                                </div>
+                            </a>
+                            <figcaption>
+                                <span class="tag">Python</span>
+                                <a href="#neural-modal" class="waves-effect waves-light raleway modal-trigger">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>Handwritten Digit Classifier</h5>
+                    <p>Artificial Intelligence</p>
+                </div>
+                <!-- JavaFX game -->
+                <div class="Portfolio-box grid-item graphics">
+                    <div class="hover-wrapper">
+                        <figure id="atari-figure">
+                            <a href="#atari-modal" class="modal-trigger inherit-wh">
+                                <div class="modal-image-container inherit-wh">
+                                    <img class="portfolio-img" src="rsc/portfolio/icon/atari.svg" alt="img03">
+                                </div>
+                            </a>
+                            <figcaption>
+                                <span class="tag">Java</span>
+                                <a href="#atari-modal" class="waves-effect waves-light raleway modal-trigger">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>JavaFX Breakout Game</h5>
+                    <p>Graphics</p>
+                </div>
+                <!-- x86 Virus -->
+                <div class="Portfolio-box grid-item misc">
+                    <div class="hover-wrapper">
+                        <figure id="virus-figure">
+                            <a href="#virus-modal" class="modal-trigger inherit-wh">
+                                <div class="modal-image-container inherit-wh">
+                                    <img class="portfolio-img" src="rsc/portfolio/icon/virus.svg" alt="img03">
+                                </div>
+                            </a>
+                            <figcaption>
+                                <span class="tag">NASM x86 Assembly</span>
+                                <a href="#virus-modal" class="waves-effect waves-light raleway modal-trigger">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>x86 Assembly Virus</h5>
+                    <p>Miscellaneous</p>
+                </div>
+                <!-- Cylinder Drawer -->
+                <div class="Portfolio-box grid-item graphics">
+                    <div class="hover-wrapper">
+                        <figure id="cube-figure">
+                            <a href="#cube-modal" class="modal-trigger inherit-wh">
+                                <div class="modal-image-container inherit-wh">
+                                    <img class="portfolio-img" src="rsc/portfolio/icon/cube.svg" alt="img03">
+                                </div>
+                            </a>
+                            <figcaption>
+                                <span class="tag">JavaScript</span>
+                                <a href="#cube-modal" class="waves-effect waves-light raleway modal-trigger">Take a look</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <h5>WebGL Model Drawer</h5>
+                    <p>Graphics</p>
+                </div>
+            </div>
+            <div class="pb-2"></div>
+        </div>
+        <div id="project-modals">
+            <!-- Checkers -->
+            <div id="checkers-modal" class="modal">
+                <div class="modal-interior">
+                    <a href="#!" class="modal-close waves-effect waves-light btn-flat"><i class="material-icons">close</i></a>
+                    <div class="modal-content">
+                        <video autoplay muted loop class="modal-video">
+                            <source src="rsc/portfolio/modal/checkers.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="modal-middle gradient-blue">
+                        <span class="white-text raleway">Web-compatible minimax AI for Checkers</span>
+                        <div>
+                            <a href="checkers.html" class="play-button waves-effect wavexs-light raleway">Try Now</a>
+                            <a href="https://github.com/AlexPetrusca/CheckersJS" class="github-button waves-effect waves-light raleway">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer raleway">
+                        <h4 class="full-width mb-1 fw-7">Checkers Engine</h4>
+                        <span>
+                            This application implements the Negamax algorithm with alpha-beta pruning and iterative deepening,
+                            achieving up to a 14-ply depth search. It uses a transposition table to reduce the search space
+                            of its search tree and an efficient 10 x 10 "mailbox" board representation to speed up search times.
+                            It also uses quiescence search to avoid the so called "horizon effect". Its heuristic evaluation
+                            function accounts for piece value, piece position, and win conditions.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Connect Four -->
+            <div id="connect4-modal" class="modal">
+                <div class="modal-interior">
+                    <a href="#!" class="modal-close waves-effect waves-light btn-flat"><i class="material-icons">close</i></a>
+                    <div class="modal-content">
+                        <video id="connect4-video" autoplay muted loop class="modal-video modal-bottom">
+                            <source src="rsc/portfolio/modal/connectfour.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="modal-middle gradient-green">
+                        <span class="white-text raleway">Simple minimax AI for Connect Four</span>
+                        <a href="https://github.com/AlexPetrusca/game-ais" class="github-button waves-effect waves-light raleway">View on GitHub</a>
+                    </div>
+                    <div class="modal-footer raleway">
+                        <h4 class="full-width mb-1 fw-7">Connect Four Engine</h4>
+                        <span>
+                            This application implements the Minimax algorithm with alpha-beta pruning, achieving up to a
+                            8-ply depth search in a reasonable timespan. It uses an immutable 6 x 7 "mailbox" board
+                            representation for programming convenience. Its heuristic evaluation function values moves that
+                            lead to future 3-in-a-row and 4-in-a-row combinations.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- MNIST classifier -->
+            <div id="neural-modal" class="modal">
+                <div class="modal-interior">
+                    <a href="#!" class="modal-close waves-effect waves-light btn-flat"><i class="material-icons">close</i></a>
+                    <div class="modal-content">
+                        <img src="rsc/portfolio/modal/mnist.gif" class="modal-video">
+                    </div>
+                    <div class="modal-middle gradient-orange">
+                        <span class="white-text raleway">MNIST digit classifier using fully connected Neural Network</span>
+                        <a href="https://github.com/AlexPetrusca/machine-learning" class="github-button waves-effect waves-light raleway">View on GitHub</a>
+                    </div>
+                    <div class="modal-footer raleway">
+                        <h4 class="full-width mb-1 fw-7">Handwritten Digit Classifier</h4>
+                        <span>
+                            This is a handwritten digit classifier trained on the popular MNIST dataset, achieving a 94.89%
+                            accuracy on the MNIST validation set. It uses a self-coded two-layer, fully-connected neural network
+                            implementation (784 x 74 x 10) with a sigmoid activation function. Each layer of the network is
+                            represented as a matrix of weights, and feedforward and backpropagation operations are represented
+                            as a series of matrix multiplications and dot products.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- JavaFX game -->
+            <div id="atari-modal" class="modal">
+                <div class="modal-interior">
+                    <a href="#!" class="modal-close waves-effect waves-light btn-flat"><i class="material-icons">close</i></a>
+                    <div class="modal-content">
+                        <video id="atari-video" autoplay muted loop class="modal-video">
+                            <source src="rsc/portfolio/modal/atari.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="modal-middle gradient-pink">
+                        <span class="white-text raleway">Modernized Breakout game written using JavaFX</span>
+                        <a href="https://github.com/AlexPetrusca/java-games" class="github-button waves-effect waves-light raleway">View on GitHub</a>
+                    </div>
+                    <div class="modal-footer raleway">
+                        <h4 class="full-width mb-1 fw-7">BreakoutFX</h4>
+                        <span>
+                            BreakoutFX is a modern implementation of the classic Atari arcade game, Breakout. Primarily coded
+                            in Java using the JavaFX library, it makes heavy use of particles and effects such as blur, bloom,
+                            and glow. The game features an extendable animation framework, allowing for delayed, parallel,
+                            and serial animation chaining. It also features framerate limited game loop implementation.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- x86 virus -->
+            <div id="virus-modal" class="modal">
+                <div class="modal-interior">
+                    <a href="#!" class="modal-close waves-effect waves-light btn-flat"><i class="material-icons">close</i></a>
+                    <div class="modal-content">
+                        <img src="rsc/portfolio/modal/virus.gif" class="modal-video">
+                    </div>
+                    <div class="modal-middle gradient-purple">
+                        <span class="white-text raleway">Harmless x86 computer virus for Windows OS</span>
+                        <a href="https://github.com/AlexPetrusca/assembly-virus" class="github-button waves-effect waves-light raleway">View on GitHub</a>
+                    </div>
+                    <div class="modal-footer raleway">
+                        <h4 class="full-width mb-1 fw-7">x86 Assembly Virus</h4>
+                        <span>
+                            This is a harmless computer virus that infects x86 PE (portable executable) files on Windows
+                            operating systems. It uses a directory-crawling algorithm to find and infect other .exe files
+                            on the host's file system. The virus works by first appending itself to the end of a .exe file.
+                            From there, it manipulates the file's PE header, changing the entry-point of the program to point
+                            to the start of the appended virus code. It then alters various PE header fields to avoid detection
+                            by simple anti-virus scans.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- cylinder drawer -->
+            <div id="cube-modal" class="modal">
+                <div class="modal-interior">
+                    <a href="#!" class="modal-close waves-effect waves-light btn-flat"><i class="material-icons">close</i></a>
+                    <div class="modal-content">
+                        <video id="cube-video" autoplay muted loop class="modal-video">
+                            <source src="rsc/portfolio/modal/cube.mov" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="modal-middle gradient-lightblue">
+                        <span class="white-text raleway">Cylindrical spline drawer written using WebGL</span>
+                        <div>
+                            <a href="drawer.html" class="play-button waves-effect wavexs-light raleway">Try Now</a>
+                            <a href="https://github.com/AlexPetrusca/WebGL-Draw" class="github-button waves-effect waves-light raleway">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer raleway">
+                        <h4 class="full-width mb-1 fw-7">WebGL Model Drawer</h4>
+                        <span>
+                        This is a WebGL application to draw and render cylindrical splines in browser. It features an
+                        interface to filter between different shading techniques, including Gouraud, Phong, depth, rim,
+                        and cel (toon) shading. It also allows users to alter the ambient and diffuse light colors as
+                        well as the specular constant for the scene. The application implements alpha selection to allow
+                        users to interact with objects in the scene and move them around using the mouse.
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax lighten">
+                <img src="rsc/parallax/ucsc1-min.jpg" style="transform: translate3d(-50%, 375px, 0px);">
+            </div>
+        </div>
+
+        <!--RESUME-->
+        <div id="resume" class="scrollspy responsive">
+            <h2 class="mt-0 pt-4 mb-2 center-align">Resume</h2>
+            <ul id="resume-dropdown" class="mb-0i collapsible center-align button-dropdown ease-2">
+                <li>
+                    <div id="resume-header" class="ease-2 collapsible-header dropdown-header" tabindex="0">Read Resume</div>
+                    <div class="collapsible-body dropdown-body">
+                        <div id="resume-container" class="center-align">
+                            <div id="resume-progress" class="progress">
+                                <div class="indeterminate"></div>
+                            </div>
+                            <iframe id="resume-frame" width="100%" height="100%"></iframe>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="pb-5"></div>
+        </div>
+
+        <!--ABOUT ME-->
+        <div class="about-me pt-5 pb-5">
+            <div id="aboutMeContainer" class="flex-row responsive">
+                <img id="meJPG" class="wow fadeInLeft mr-4 job-icon" src="rsc/me.jpg" style="max-width: 450px">
+                <div class="wow fadeInRight thanks-container align-center">
+                    <div class="thanks-title mb-1_5 mt-0">ABOUT ME</div>
+                    <div class="thanks-desc raleway">
+                        I am a software engineer specializing in backend/full-stack work. I like building passion
+                        projects from scratch and learning new things to get my projects off the ground. Over five+ years
+                        of programming, I have picked up experience working with Java, Scala, JavaScript, Python and C/C++
+                        on projects ranging from video games and music visualizers to deep neural networks and distributed
+                        key-value stores.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--CONTACTS-->
+        <div class="contacts">
+            <div class="container center">
+                <div class="valign-wrapper mb-0i row pt-1 pb-1">
+                    <div class="center-9">
+                        <div class="col s12 m6 mt-1_5 mb-1_5">
+                            <a href="tel:650-996-3084"><i class="small material-icons white-text">local_phone</i></a>
+                            <a href="tel:650-996-3084"><p class="white-text">(650) 996-3084</p></a>
+                        </div>
+                        <div class="col s12 m6 mt-1_5 mb-1_5">
+                            <a href="mailto:petruscalex@gmail.com"><i class="small material-icons white-text">email</i></a>
+                            <a href="mailto:petruscalex@gmail.com"><p class="white-text">petruscalex@gmail.com</p></a>
+                        </div>
+                    </div>
+                    <div class="center-9">
+                        <div class="col s12 m6 mt-1_5 mb-1_5">
+                            <a href="https://github.com/AlexPetrusca"><img class="icon" src="rsc/contact/github.svg"></a>
+                            <a href="https://github.com/AlexPetrusca"><p class="white-text">AlexPetrusca</p></a>
+                        </div>
+                        <div class="col s12 m6 mt-1_5 mb-1_5">
+                            <a href="https://www.linkedin.com/in/alexandru-petrusca"><img class="icon" src="rsc/contact/linkedin.svg"></a>
+                            <a href="https://www.linkedin.com/in/alexandru-petrusca"><p class="white-text">alexandru-petrusca</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="center pt-1 pb-1">
+        © 2021 Alex Petrusca. Thanks to Sophia Qin.
+    </footer>
+</div>
+
+<!--LIBRARY SCRIPT LOADING-->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/isotope.min.js"></script>
+<script type="text/javascript" src="js/progressbar.min.js"></script>
+<script type="text/javascript" src="js/typeit.min.js"></script>
+<script type="text/javascript" src="js/detectmobile.min.js"></script>
+<!--CUSTOM SCRIPT LOADING-->
+<script type="text/javascript" src="js/init.min.js"></script>
+<script type="text/javascript" src="js/custom.min.js"></script>
+</body>
+</html>

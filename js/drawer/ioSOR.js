@@ -8,10 +8,10 @@
  * Date:         October 2, 2016
  *
  * BUG FIXES:
- * 1) Looping Bug 
+ * 1) Looping Bug
  *    Identified and Sovled by:   Mackenzie Glynn
  *    Date:         October 4, 2016
- *    Rectified in Version 1.1 
+ *    Rectified in Version 1.1
  *
  * 2) parseFloat, Setup Function, Object Format
  *    Identified by:   Cole Faust
@@ -196,4 +196,3 @@ function readEvent(evt) {
         alert("Failed to load file");
     }
 }
-

@@ -687,10 +687,18 @@ figure {
     -webkit-box-shadow: unset !important;
 }
 
+.nav-transparent a {
+    color: white !important;
+}
+
 .nav-solid {
     background-color: rgba(255, 255, 255, 0.7) !important;
     color: black;
     stroke: gray;
+}
+
+.nav-solid a {
+    color: black !important;
 }
 
 .sidenav li>a:hover {

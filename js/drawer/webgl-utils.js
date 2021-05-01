@@ -182,10 +182,10 @@ if (!window.requestAnimationFrame) {
   })();
 }
 
-/** * ERRATA: 'cancelRequestAnimationFrame' renamed to 'cancelAnimationFrame' to reflect an update to the W3C Animation-Timing Spec. 
- * 
- * Cancels an animation frame request. 
- * Checks for cross-browser support, falls back to clearTimeout. 
+/** * ERRATA: 'cancelRequestAnimationFrame' renamed to 'cancelAnimationFrame' to reflect an update to the W3C Animation-Timing Spec.
+ *
+ * Cancels an animation frame request.
+ * Checks for cross-browser support, falls back to clearTimeout.
  * @param {number}  Animation frame request. */
 if (!window.cancelAnimationFrame) {
   window.cancelAnimationFrame = (window.cancelRequestAnimationFrame ||
